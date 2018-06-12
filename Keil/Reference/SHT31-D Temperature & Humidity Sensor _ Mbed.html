@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)https://os.mbed.com/components/SHT31-D/ -->
+<html class=" js no-touch svg inlinesvg svgclippaths no-ie8compat" lang="en" style=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="stndz-style"></style>
+    
+    <!-- Google Tag Manager -->
+    <script type="text/javascript" async="" src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/munchkin.js.下载"></script><script type="text/javascript" async="" src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/recaptcha__zh_tw.js.下载"></script><script type="text/javascript" async="" src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/analytics.js.下载"></script><script async="" src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/gtm.js.下载"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl+ '&amp;gtm_auth=SMYNPwM0ICsV00c1ZHETqQ&amp;gtm_preview=env-2&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M6FZ495');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="https://os.mbed.com/static/img/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://os.mbed.com/static/img/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://os.mbed.com/static/img/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://os.mbed.com/static/img/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://os.mbed.com/static/img/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://os.mbed.com/static/img/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://os.mbed.com/static/img/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://os.mbed.com/static/img/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://os.mbed.com/static/img/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://os.mbed.com/static/img/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://os.mbed.com/static/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://os.mbed.com/static/img/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://os.mbed.com/static/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="https://os.mbed.com/static/img/favicons/manifest.json">
+    <link rel="shortcut icon" href="https://os.mbed.com/static/img/favicon.ico?">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/static/img/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>SHT31-D Temperature &amp; Humidity Sensor  | Mbed</title>
+    
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="user-scalable=yes,width=device-width,initial-scale=0.9">
+
+    
+
+    <!-- Included CSS Files -->
+    
+    <link rel="stylesheet" type="text/css" href="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/futura.css">
+    <link type="text/css" href="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/app.css" rel="stylesheet">
+    <link type="text/css" href="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/mbed-1.css" rel="stylesheet">
+    <link rel="stylesheet" href="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/responsive-tables.css">
+    <link rel="stylesheet" href="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/ss-standard.css">
+    <link rel="stylesheet" href="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/general_foundicons.css">
+    <link rel="stylesheet" href="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/social_foundicons.css">
+    <link rel="stylesheet" href="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/import-button.css">
+    <link rel="stylesheet" href="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/cookie_law.css">
+    <link rel="stylesheet" href="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/global_nav_bar.css">
+    
+    
+    <link rel="stylesheet" href="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/css">
+    <link rel="stylesheet" href="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/css(1)">
+    <link rel="stylesheet" href="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/sass-app-2.css">
+
+    
+    <script src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/modernizr.foundation.js.下载"></script>
+    <script src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/jquery.js.下载"></script>
+    <script type="text/javascript" src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/date.js.下载"></script>
+    <script type="text/javascript" src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/mbedcom.js.下载"></script>
+    <script type="text/javascript" src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/import-button.js.下载"></script>
+    <script type="text/javascript" src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/jquery.timeago.js.下载"></script>
+    <script type="text/javascript" src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/jquery.cycle.all.latest.js.下载"></script>
+    <script type="text/javascript" src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/json2.js.下载"></script>
+    <script src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/jquery.event.move.js.下载"></script>
+    <script src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/jquery.event.swipe.js.下载"></script>
+    <script src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/jquery.foundation.alerts.js.下载"></script>
+    <script src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/jquery.foundation.buttons.js.下载"></script>
+    <script src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/jquery.foundation.forms.js.下载"></script>
+    <script src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/jquery.foundation.navigation.js.下载"></script>
+    <script src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/jquery.foundation.tabs.js.下载"></script>
+    <script src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/jquery.foundation.reveal.js.下载"></script>
+    <script src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/jquery.foundation.topbar.js.下载"></script>
+    <script src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/jquery.foundation.accordion.js.下载"></script>
+    <script src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/jquery.placeholder.js.下载"></script>
+    <script src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/responsive-tables.js.下载"></script>
+    <script src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/jquery.smooth-scroll.min.js.下载"></script>
+    <script src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/ss-standard.js.下载"></script>
+    <script src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/ss-social.js.下载"></script>
+    <script src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/app.js.下载"></script>
+    <script src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/clipboard.min.js.下载"></script>
+    
+    <script type="text/javascript">
+        var MTIProjectId='531df303-da6d-4e1e-934d-ec3ecdc164a9';
+        (function() {
+            var mtiTracking = document.createElement('script');
+            mtiTracking.type='text/javascript';
+            mtiTracking.async='true';
+            mtiTracking.src="/static/js/mtiFontTrackingCode.js";
+            (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild( mtiTracking );
+        })();
+    </script><script type="text/javascript" async="" src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/mtiFontTrackingCode.js.下载"></script>
+    
+    
+    
+<link type="text/css" rel="stylesheet" href="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/1.css"></head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>&lt;iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M6FZ495&amp;gtm_auth=3a8Vwkp5SsDiYq6tYR1ObQ&amp;gtm_preview=env-6&amp;gtm_cookies_win=x"
+    height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="global-nav-bar">
+    <div class="global-nav-bar-logo">
+        <a href="https://www.mbed.com/">
+            <img src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/ArmMbedLogo.svg">
+        </a>
+    </div>
+    <div class="global-nav-bar-menu">
+        <ul>
+            <li class="developer active">
+                <a href="https://os.mbed.com/">
+                    <span class="hide-small">Mbed </span>OS
+                </a>
+            </li>
+            <li class="cloud ">
+                <a href="https://cloud.mbed.com/"><span class="hide-small">Mbed </span>Cloud</a>
+            </li>
+            <li class="partner ">
+                <a href="https://partners.mbed.com/">Partner<span class="show-small">s</span><span class="hide-small"> Portal</span></a>
+            </li>
+        </ul>
+    </div>
+    <div class="global-nav-bar-search">
+        <form action="https://os.mbed.com/search/" method="GET">
+            <input type="search" name="q" placeholder="Search...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+</div>
+
+    
+    <div class="nav-wrapper hide-on-print">
+        <div class="row">
+            <div class="twelve columns navigation" id="nav">
+            
+
+                <ul class="nav-bar menu-list">
+
+                    <li><a href="https://os.mbed.com/">OS Home</a></li>
+                    <li class="hasdropdown not-click">
+                        <a href="https://os.mbed.com/hardware/">
+                            Hardware
+                        </a>
+                        <ul class="dropdown no-bullet">
+                            <li><a href="https://os.mbed.com/modules/">Modules</a></li>
+                            <li><a href="https://os.mbed.com/platforms">Boards</a></li>
+                            <li><a href="https://os.mbed.com/components/">Components</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://os.mbed.com/code/">Code</a></li>
+                    <li class="hasdropdown not-click">
+                        <a href="https://os.mbed.com/components/SHT31-D/#">
+                            Documentation
+                        </a>
+                        <ul class="dropdown no-bullet">
+                            <li><a href="https://os.mbed.com/docs/">Documentation</a></li>
+                            <li><a href="https://os.mbed.com/cookbook/">Cookbook</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://os.mbed.com/questions/">Questions</a></li>
+                    <li><a href="https://os.mbed.com/forum/">Forum</a></li>
+                    <li class="navSpacer">|</li>
+                    <li class="user-links nav-action-button"><a href="https://os.mbed.com/compiler/" target="_blank">Compiler</a></li>
+
+                </ul>
+
+                <ul class="nav-bar menu-list right">
+                    
+                        <li class="user-menu"><a href="https://os.mbed.com/account/login/?next=/components/SHT31-D/">Log in/Sign up</a></li>
+                     
+                </ul>
+            
+            </div>
+        </div>
+    </div>
+
+    
+    <div>
+        <div class="row" id="top">
+            <div class="six columns">
+                <div class="breadcrumbs">
+                    
+    <a href="https://os.mbed.com/components/">Components</a> »
+    
+    <a href="https://os.mbed.com/components/cat/sensors/">Sensors</a> »
+    
+    <a href="https://os.mbed.com/components/cat/sensors-temperature/">Temperature</a> »
+    SHT31-D Temperature &amp; Humidity Sensor 
+
+                </div>
+            </div>
+            <div class="six columns header search-block">
+                
+    
+    <form action="https://os.mbed.com/search/component" method="GET">
+    <div class="row">
+        <div class="ten mobile-three columns">
+            <input type="text" name="q" placeholder="Search components on os.mbed.com..." class="search-input" value="">
+        </div>
+        <div class="two mobile-one columns">
+            <input type="submit" value="Search" class="button">
+        </div>
+    </div>
+</form>
+
+
+            </div>
+        </div><!-- end of #top -->
+
+        
+    </div>
+    
+
+    
+<div class="row">
+    <div class="nine columns main-content" id="mbed-content">
+        
+
+        
+
+    
+
+    
+    
+
+
+
+<h1>SHT31-D Temperature &amp; Humidity Sensor </h1>
+
+
+
+<p>SHT31-D Temperature &amp; Humidity Sensor </p>
+
+
+
+
+
+<h2>Library</h2>
+
+<div class="flashbox flibrary"><h4 class="ftitle"><a class="button small radius" style="font-weight: bold; position: relative; float: right;" href="https://os.mbed.com/compiler/#import:/users/andcor02/code/Sht31/;mode:lib" target="compiler">Import library</a><a href="https://os.mbed.com/users/andcor02/code/Sht31/">Sht31</a></h4><p>working with mbed os 5.5</p><p class="wiki-api-footer"> Last commit <abbr class="timeago" title="11 Sep 2017">11 Sep 2017</abbr> by <span><span class="authortext"><a href="https://os.mbed.com/users/andcor02/"><img alt="" class="icon" width="16px" height="16px" src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/c6e6752bcffd71894ae26e4ce787d8e4.jpg.16x16_q85_crop-center.jpg"></a> <a href="https://os.mbed.com/users/andcor02/"> Andrea Corrado</a></span></span></p></div>
+
+
+
+
+
+
+<h2>Datasheet</h2>
+<a href="https://www.adafruit.com/product/2857">https://www.adafruit.com/product/2857</a>
+
+
+
+<h2>Notes</h2>
+
+<div>
+    <p>Sensiron Temperature/Humidity sensors are some of the finest &amp; highest-accuracy devices you can get. And, finally we have some that have a true I2C interface for easy reading. The SHT31-D sensor has an excellent ±2% relative humidity and ±0.3°C accuracy for most uses. We now use the version with a PTFE filter, it'll stay clean while still allowing humidity measurements to work</p>
+<p>Unlike earlier SHT sensors, this sensor has a true I2C interface, and (bonus!) even with two address options. It also is 3V or 5V compliant, so you can power and communicate with it using just about any microcontroller or microcomputer.</p>
+<p>Such a lovely chip - so we spun up a breakout board with the SHT31-D and some supporting circuitry such as pullup resistors and capacitors. Each order comes with one fully assembled and tested PCB breakout and a small piece of header. You'll need to solder the header onto the PCB but it's fairly easy and takes only a few minutes even for a beginner.</p>
+
+</div>
+
+
+    
+
+    <hr style="margin-top: 1em;">
+    
+        
+
+
+
+
+
+<div id="component-discussions">
+    <div class="component-community panel">
+        
+            
+                <p>Please <a href="https://os.mbed.com/account/login/?next=/components/SHT31-D/">log in</a> to start a discussion or ask a question.</p>
+            
+            
+                
+
+<script language="javascript" type="text/javascript" src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/AddFileBrowser.js.下载"></script>
+
+<div id="newtopic" class="" style="display: none;">
+    <p style="float: right; margin: 0px;">
+        <b>
+            <a href="javascript:void(0)" onclick="javascript:$(&#39;#newtopic&#39;).slideToggle(&#39;medium&#39;);">
+                <i class="fa icon_cross" aria-hidden="true"></i> Close
+            </a>
+        </b>
+    </p>
+
+    <h3 class="sectionheader" style="margin-top: 0px;">
+        
+        Start new topic
+        
+    </h3>
+    <div id="result" style="display:none;">
+        <h4>Preview of your unsaved post:</h4>
+        <div id="resultcontent"></div><br>
+    </div>
+
+    <form method="post" action="https://os.mbed.com/forum/component-791-SHT31-D-community/">
+        <input type="hidden" name="csrfmiddlewaretoken" value="mEB42ouFSHfBr8EXCfWMXXFY8u6GCK90">
+        <table class="formtable">
+            
+            <tbody><tr>
+                <td>
+                    <label for="id_topic_name">Topic Title:</label>
+                    
+                    <input id="id_topic_name" maxlength="150" name="topic_name" size="60" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    
+                    <div style="text-align: right; margin-bottom: 5px;"><a href="javascript:FileBrowser.show(&#39;id_content&#39;, &#39;/filebrowser/browse/?pop=1&amp;mode=wiki&amp;editor=id_body&#39;);" class="fb_show">Insert images or files <img src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/filebrowser_icon_show.gif" height="18" alt=""></a></div>
+                    <textarea cols="40" id="id_body" name="body" rows="15" style="width: 100%;"></textarea>
+                    <script type="text/javascript">
+    $(document).ready(function()
+    {
+    $("#showhelp").click(function() {
+        $("#help").slideToggle('fast')
+      }
+    );
+    });
+</script>
+            <div style="text-align: right;"><a href="https://os.mbed.com/components/SHT31-D/#" onclick="return false;" id="showhelp"><i class="fa fa-caret-down" aria-hidden="true"></i> Editing tips</a>
+            </div>
+            <div id="help" style="display: none; margin: 10px 0 20px 0" class="flashbox finfo">
+
+                <h4 class="ftitle">Editing tips</h4>
+                
+                <div class="row">
+                	<div class="twelve columns">
+<h5>Headings</h5>
+<pre>= Heading 1 =
+== Heading 2 ==
+=== Heading 3 ===
+</pre>
+
+<h5>Styling</h5>
+<pre>**bold text**, //italic text//, ##monospaced text##
+__underlined text__, --strikethrough text--
+^^superscript text^^, ,,subscript text,,</pre>
+
+<h5>Lists</h5>
+<pre>* List Item 1
+* List Item 2
+ # Numbered List Item 2.1
+</pre>
+
+<h5>Links</h5>
+<pre>[[WikiPage]]
+[[http://mbed.org]]
+[[/handbook/SPI|More about SPI]]
+</pre>
+
+<h5>Upverter embed <small>(hint - use the unique id found in the embed code)</small></h5>
+<pre>&lt;&lt;upverter&gt;&gt;634b5640a5bbd8a7&lt;&lt;/upverter&gt;&gt;
+</pre>
+
+<h5>Code <small>(hint - publishing your code and linking to it makes it easier to import your program)</small></h5>
+<pre>&lt;&lt;code title=include the mbed library with this snippet&gt;&gt;
+#include "mbed.h"
+&lt;&lt;/code&gt;&gt;
+</pre>
+<h5>Linking to a program</h5>
+<pre>&lt;&lt;program  /users/simon/programs/SerialBuffer/latest/ &gt;&gt;</pre>
+
+<h5>Upverter embed <small>(hint - use the unique id found in the embed code)</small></h5>
+<pre>&lt;&lt;upverter&gt;&gt;634b5640a5bbd8a7&lt;&lt;/upverter&gt;&gt;
+</pre>
+
+<h5>Team embed example</h5>
+<pre>&lt;&lt;team http://mbed.org/teams/mqtt/ /&gt;&gt;
+</pre>
+
+<h5>Component embed example</h5>
+<pre>&lt;&lt;component http://mbed.org/components/AX-12/ /&gt;&gt;
+</pre>
+
+
+
+
+<h5>Table of Contents <small> is included by default, to disable put this snippet on the page.</small></h5>
+<pre>&lt;&lt;notoc&gt;&gt;
+</pre>
+
+<h5>Blocks</h5>
+<pre>&lt;&lt;quote&gt;&gt;
+Can I markup a quote, help or warning block?
+&lt;&lt;/quote&gt;&gt;
+</pre>
+
+<h5>Images</h5>
+<pre>{{/static/img/mbed.gif}}
+{{http://mbed.org/static/img/mbed.gif}} 
+[[WikiPage|{{/static/img/mbed.gif}}]]
+[[WikiPage|{{/static/img/mbed.gif}}]]
+</pre>
+
+<h5>Gallery <small>size argument can be either small or medium, default is large</small></h5>
+<pre>&lt;&lt;gallery size=small&gt;&gt;
+{{/static/img/mbed.gif}}
+{{/static/img/mbed.gif|mbed logo}}
+[[http://mbed.org|{{/static/img/mbed.gif}}]]
+[[http://mbed.org|{{/static/img/mbed.gif|mbed logo}}]]
+&lt;&lt;/gallery&gt;&gt;
+</pre>
+
+<h5>Videos</h5>
+<pre>{{http://www.youtube.com/watch?v=7LPDRcahhUE}}
+</pre>
+</div>
+                	
+                	<div class="twelve columns">
+                	<p style="text-align:right; margin-bottom: 0;">See the <a target="_blank" href="https://os.mbed.com/cookbook/Wiki-Syntax">full wiki syntax (in new window)</a></p>
+                	</div>
+                
+                
+</div>
+                
+                
+ 
+            </div>
+
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="id_tags">Topic Tags:</label>
+                    <input id="id_tags" name="tags" style="width: 300px" type="text"><script type="text/javascript">
+            jQuery("#id_tags").autocomplete(["__enable_mmu()", "__ldrex", "__strex", "_NARGS", "0.0.0.0", "1", "1-wire", "100MHz", "1024K", "10base-t 100base-tx", "11", "11062", "11bit", "11U24", "11u35", "12", "12.0KB", "128-6", "12C", "12v", "15A", "16 bit ADC", "1768", "1800", "1Mbit/sec", "2", "2.0", "230", "2368", "23K256", "24 bits", "29bit", "2D", "3-Space", "3.1", "3.3v Vout", "32-bit", "32.768kHz", "32KB", "334", "3D", "3d scanner", "3dscanner", "3g", "3pi", "4.21", "400khz", "401RE", "4088", "422", "433", "433MHz", "434", "434MHz", "4Bank 7segment", "4D SGC TFT Screen", "4DGL", "5", "5.0", "5.6", "5110", "513137", "5v", "6", "60MHz", "64", "64-bit", "64bit", "64KB", "6610", "6610LCD", "6dof", "7", "7segment", "8", "8.3", "802.3af", "802.3AT", "9", "9 bit", "9-DOF", "9bit", "a", "A1", "a9", "AA", "absdiff", "Abstract", "acceleration", "accelerometer", "acceptance", "access", "accounts", "Accuracy", "acquisition", "active object pattern", "ActiveSync", "activity", "AD345", "AD5666", "AD7190", "AD7746", "AD7797", "Adafruit", "adafruit GPS breakout", "adapter", "adc", "address", "ade7754", "ADK", "administration", "ADT", "ADT7410", "Advancement", "advocacy", "adxl335", "ADXL345", "AES", "AES256", "agilent", "AHBSRAM", "AHBSRAM0", "AHBSRAM1", "AHRS", "AIC23", "ain", "Airplay", "Airtunes", "ajax", "algebra", "all", "allocation", "almeno", "AltGr", "altium", "amin", "amoled", "Amp", "amplifier", "Amps", "AMQP", "an", "Analog", "Analog Devices", "analog in", "analog out", "analog reference", "AnalogIn", "AnalogInOut", "AnalogOut", "analogue", "analogue output", "Analytics", "ANCS", "and", "android", "AndroidAccessory", "Andruino", "ANGLE", "animatronics", "anologin", "ANT", "ANT+", "Antenna", "Aout", "AP2", "apache", "api", "APP", "app-board", "append", "Apple", "application", "April", "arch gprs", "architecture", "arduino", "arduino shield", "ardunnio", "are", "ARES", "arguments", "arithmetic", "ARM", "arm_gcc", "ARM-GCC", "ARM7", "ARM9", "armv8m", "arr", "array", "Arrays", "Artists", "as5050", "Ascii", "ASEE", "asks", "Assembler", "assembly", "assertion", "Astrobe", "async", "AT", "at45", "at90", "Atmel", "atoi", "ATSAM3U2C", "ATSAMD21-XPRO", "attach", "attach()", "audio", "AUDIO_DISCO_F746NG", "authentication", "auto", "autoisp", "Automobile", "AUTOSAR", "average", "AVR", "AVReceiver", "awesome", "awesome!", "AWS", "Ax500", "AxedaGO", "Azure", "AzureIoTClient", "background", "Bad", "balancing", "banging", "bare metal", "Base", "base board", "baseboard", "basic", "bass", "batteries", "Battery", "baud", "baudrate", "BBC", "beacon", "BeagleBone", "Bee", "beginner", "belgium", "Bertl", "Best", "beta", "BetaBug", "between", "beyond", "Bi-Directional", "Bidirectional", "big", "billy", "bin", "binary", "BIND", "Binocular Disparity", "biped", "bit", "bit-band", "bitbang", "bitmap", "Bitmaps", "bits", "bitwise", "bitwise or", "bl  smart", "Black Friday", "BLE", "ble api", "BLE Nano", "BLE_API", "BLE_Thermometer", "bleeper", "blend", "blinkm", "Blinky", "blip", "Blob Algorithm", "Block device", "blocks", "blocks free", "BLOD", "Blue", "bluebrain", "bluegiga", "Bluemix", "BlueRay", "bluetooth", "Bluetooth 4.0", "Bluetooth Low Energy", "Bluetooth modules BX100", "bluetooth smart", "blueusb", "bma180", "BME280", "bmp085", "BMPTK", "BNO055", "Board", "boards", "bob2", "bog", "BOM", "bonding", "bonjour", "bookmark", "books", "bool", "boost clock rate", "Boot", "bootloader", "bootstrapping", "border router", "Box", "boxes", "brace", "braces", "breadboard", "break", "breakout", "breakout board", "breakpoint", "brick", "broadcasting", "broken", "brown-out", "browser", "BSOD", "BTstack", "buffer", "bufferd", "buffers", "bug", "bugs", "build", "build awesome", "Build Options", "builder", "buildsystem", "burst", "bus", "BusIn", "BusInOut", "BusOut", "BUTTON", "buzzer", "BX10", "Byte", "bytes", "bzr", "C", "C Library", "c programming", "c-embeded", "C'est", "C++", "c++0x", "C++11", "C027", "C030", "C12832", "C24LCXX_I2C", "C4017W", "Cable", "caching", "Cad", "call", "callbacks", "camera", "CAN", "CAN adapter", "can bus", "can-bus", "canal", "canbus", "cancel", "cannot", "cannybots", "CANRAM", "Capacitance", "Capacity", "Captcha", "captions", "captouch", "capture", "car", "card", "caret", "carro", "case", "cast", "CAU", "cc2500", "CC3000", "CDC", "CEC", "CELL", "Cellular", "CGI", "chain", "challange", "Change", "Char", "char *", "character", "checkout", "chinese", "chip", "chip select", "Chord", "chrome", "chromium", "cinder", "Circuit", "circuit board", "circular", "class", "class D", "classes", "clean", "clear", "cli", "clien", "client", "clock", "clone", "close", "cloud", "cluster", "cm0", "cmake", "cmis", "CMPS03", "cmsis", "cmsis dsp", "cmsis_os2.h", "CMSIS-DAP", "cmsis++", "CNC", "CoAP", "code", "Code 10", "Code Correlation", "code folding", "code generation", "code red", "Code Sourcery", "code_red", "code?", "CODEC", "Coder;", "CodeRed", "codes", "CodeSourcery", "CoIDE", "cojson", "colapse", "collaborate", "Collaboration update", "collision", "color", "colors", "com", "COM3", "command", "command and control", "commands", "comment", "comments", "commit", "common", "comms", "Communication", "community contributors", "comparator", "compare", "compass", "compatibility", "competition", "compi", "compilation", "compile", "compiler", "compiler erro", "compiler error", "compiler error codes", "compiler warning", "Compiling", "Compoler", "component", "component_database", "componentless", "components", "Computer", "con", "concatenation", "Configuration", "configure", "connect", "connected", "connector", "connectors", "const", "constant", "constructor", "consumption", "contest", "continuous", "contract", "contributions", "control", "controller", "controllerless", "conversion", "CooCox", "cookbook", "copy", "copyrights", "Core407V", "corrupt", "Cortex", "Cortex-M0", "Cortex-M0+", "cortex-m4", "cos", "cosm", "counter", "counters", "counting", "cout", "CPHA", "CPOL", "cpplapack", "CPU", "CPUマニュアル", "CRC", "critical_section", "Crius", "Crypto", "cryptography", "crystal", "CS4331", "CS5331", "css", "CT32", "CTCR", "CTS", "CubeMX", "CubieBoard", "Curl", "current", "current sensor", "custom", "custom channel", "custom PCB", "Custom Terminal", "cut", "CW", "CyaSSL", "cygwin", "D", "D-", "D+", "D0", "D1", "D21", "D5", "D6", "da", "DA14580", "dac", "DAC noise", "daisy", "Dalek", "Dali", "damage", "DAP", "DAP-LINK", "DAPlink", "DAQ", "data", "data abort", "data entry", "data logger", "Data Logging", "Data Transfer", "Database", "datalogging", "Date", "datestamp", "dB", "DC motor", "dc-offset", "dead", "deadlock", "deadmbed", "debounce", "debug", "debugger", "debugging", "debugging DigitalOut", "debugging tools", "decimal", "declaration", "declarations", "deep sleep", "DeepSleep", "default", "Default_Handler", "defined", "definition", "DEGREE", "delay", "delete", "delta", "demo", "denied", "deploy", "deprecated", "DerbyCon", "derive", "description", "Descriptors", "Design", "design101", "DesignSpark", "desk", "destroyed", "Destructor", "detach", "detection", "development", "developmet", "device", "device management", "device.h", "devices", "DFCM-NNN40", "DFM", "DFRobot", "DFU", "DHCP", "DHT11", "DHT22", "diary", "Differant", "difference", "Differential AD", "Digilent", "Digital", "digital compass", "Digital I/O", "digital servos", "DigitalDice", "DigitalIn", "DigitalInOut", "digitalOut", "DigitialOut", "dint", "diode", "DIP", "direct test mode", "direction", "directive", "directory", "disable", "DISCO-F746NG", "DISCO-L475VG", "DISCONNECT", "discovery", "Disk", "display", "Displays", "distance", "distributers", "DIY", "dll;matlab;", "DM9161", "DMA", "dmu02", "DMX", "DMX512", "dns", "do", "doa", "doc", "docs", "document", "documentation", "documentation not ready", "does", "DOGM", "domotic", "don't", "dongle", "doorbell", "dot", "DotNet", "double", "DoubleEdge", "doubt", "Dowload", "Download", "downloads", "doxygen", "DP83848", "dram", "drift", "Drive", "driver", "driverlibrary", "driving", "ds-5", "DS1052E", "ds1307", "DS1820", "DS18B20", "DS18S20", "Dshot", "DSP", "dtm", "dual-core", "duplex", "duty cycle", "DVI", "Dynamic", "dynamixel", "dyndns", "e-ink hoopup", "E-Paper", "E260-D", "E289", "E980", "EA", "Eagle", "easy", "Easydriver", "ecc", "echo", "eclipse", "Eddystone", "editor", "EEPROM", "ef32", "effect", "EFM32", "EFM32 Pearl Gecko", "EFM32PG12", "ehternet", "EIDE", "eint", "elegant coding", "Element14", "eLua", "em-406", "EM-406A", "EM408", "email", "Embedded", "EmbeddedArtists", "embitz", "EmBlocks", "empty", "empty binary file", "EMS", "emulator", "emwin", "ENC28J60", "enclosure", "Encoder", "encoders", "encoding", "encrypted firmware", "encryption", "Endpoint", "Endpoints events", "energy", "energy monitoring", "Energy Profile", "engine", "Enquiry", "entire", "Entropy Error", "enum", "Environment", "ERIC", "err", "errata sheet", "Error", "Error 777", "Error code", "Error:", "Errors", "es", "esc", "Escort Service in Gurgaon", "ESP8266", "español", "etc...", "eth", "ETH_RST", "etherCAT", "ethernet", "EthernetIfBeta", "EthernetInterface", "EthernetInterface　GR-PEACH", "EthernetNetIf", "evb", "eve", "event", "event-driven programming", "events", "Ever", "EVK-ODIN-W2", "eVY1", "example", "exception handling", "exit", "Expansion", "Export", "Export C", "Exporting", "extended operating temperature", "extension", "external", "external memory", "extract", "eye-fi", "F091RC", "F302R8", "f303k8", "f334", "F334R8", "F401RE", "F411RE", "F429ZI", "F767ZI", "facebook", "fail", "fail.txt", "failed", "fails", "failure", "fall()", "FAQ", "fashion", "fast", "faster", "FastOut", "FastPWM", "FAT", "FAT FS", "fatfilesystem", "FatFIlesystem.lib", "FATFS", "faulty mbed", "Favorites", "FDRM", "FDRM_KL25Z_USBSerial_example", "FDRM-KL25Z", "feature", "features", "fedora", "feedback", "Felica", "feof", "FF1705", "ffc", "FFT", "fgetc", "Fiel", "fields", "FIFO", "file", "File Exclusion", "file format", "file system", "filename", "files", "Filesys", "filesystem", "FileSystemLike", "filetree", "filter", "filtering", "filters", "find", "finder", "fingerprint", "firefox", "firm", "firmata", "firmware", "firmware 141212", "Firmware over the air", "Firmware Update", "firmware.bin", "FirmwareUpdater", "fixedpoint", "fixthis", "flash", "flash drive", "FLASH IAP", "flashing", "flex", "flexibility", "flicker", "float", "Floating point", "Flot", "flow", "Fm+", "fmc", "folders", "Follow", "following", "font", "Fools", "FOOTPRINT", "fopen", "for", "foreground", "fork", "format", "formating", "formatting", "Forum", "FOTA", "fpc", "fpc1011f", "FPF212", "FPGA", "fprint", "fprintf", "fragmentation", "frame", "frame rate", "framework", "FRDM", "FRDM K64F", "FRDM-K22F", "FRDM-K64F", "FRDM-K82F", "FRDM-KL-46Z", "FRDM-KL05z", "FRDM-KL25Z", "FRDM-KL28Z", "FRDM-KL46Z", "FRDM0K22F", "free", "freebsd", "Freedom", "Freedom K64", "FreeRTOS", "Freescale", "freeze", "freezes", "Freq", "frequency", "freshen", "Fried", "frmd-kl25z", "frog", "front panel", "frozen program", "frustration", "fscanf", "fseek", "FSK", "FT232R", "FTDI", "FTDI Cable", "FTP", "fubction", "fuckyouimspiderman", "fun", "function", "function prototypes", "für", "fuse", "future", "Fwrite", "fxos8700cq", "FXOS8700Q", "G", "gadgeteer", "game", "gang", "garbage", "gateway 504 timeout", "GATT", "GATT Client", "gay", "gcc", "gcc arm", "GCC_CR", "gcc4mbed", "gd", "gdb", "Gecko", "GEII", "generate", "Gesture", "getc", "GFX", "GHI", "git", "glasses", "GLCD", "glitch", "global", "gmail", "gnu", "GNU GCC", "google", "gpdma", "GPIO", "GPRS", "GPS", "GR-PEACH", "GR-PEACH　Hardware", "GR-PEACH_producer_meeting", "GR-PEACHで、128x64ドットのグラフィックLcdに表示", "GR-SAKURA", "graphic", "Graphics", "Graphics Driver", "graphing", "graycode", "great", "grep", "group", "Grove", "GSM", "guest", "GUI", "guitar", "Gurgaon escorts", "gyro", "gyroscope", "h", "H-bridge", "hacking", "hacks", "HAL", "half", "hall effect sensor", "HAM", "HAM Radio", "hand crank", "handler", "handshaking", "hang", "hangs", "hard fault", "HardFault_Handler", "hardhackers", "HARDSTOP", "hardware", "HC-06", "HCE", "HcHCCA", "HCSR04", "HD44780", "HDD", "HDL", "HDMI", "header", "headers", "heap", "heat", "hello", "helloworld", "help", "Helpful_1", "hepl", "herd", "hex", "hexapod", "HEXIWEAR", "hg", "hibernate", "hibernation", "HID", "high", "high temperature", "high-pass", "high-speed", "hire", "Hitachi", "Hitec", "hm-10", "HMAC", "HMC6352", "HMI", "home", "Home Automation", "HomeKit", "homo", "hookup", "Host", "host card emulation", "HotSync", "hour glass", "how", "howto", "HRM1017", "HSYNC", "HTM", "html", "http", "HTTPClient", "httpd", "HTTPDynamicPage", "HTTPfile", "HTTPLog", "https", "HTTPServer", "HTTPServer_echoback", "HTTPServerExample", "HTTPText", "HTTs", "hub", "hub scynchronisig", "Humidity", "HX8347D", "I/O", "I2C", "I2C API", "I2C slave", "I2C/SPI-to-UART IC", "I2C2", "I2CC0", "i2cmaster", "i2cslave", "I2S", "I2S;", "IAP", "IAR", "iBeacon", "IBM", "Icrease", "ID", "ID12", "IDB05A1", "ide", "ideas", "ie7", "IE9", "if", "ifdef", "ignore", "IHM02A1", "IHM03A1", "IHM06A1", "ILI9325", "ILI9328", "ILI9341", "imabsdiff", "image", "image differences", "image processing", "image processing in mbed", "Images", "impl", "import", "importing", "IMU", "IMU Razor", "In", "inches", "include file", "incomplete coding", "Increasing", "indent", "indexing", "industrial", "Inertial", "infinite loop", "info", "infra", "infrared", "initialisation", "initialization", "initiliazation", "InitMemorySubsystem()", "inline", "Input", "input capture", "Insertion", "Install", "installer", "instance", "Instances", "int", "integer", "integration", "Intel ISEF", "interface", "interface chip", "interfacing", "intern", "internal", "Internet", "internet of things", "Interr", "interrupt", "interrupt callback", "Interrupt priority", "InterruptIn", "interrupts", "introduction", "intsall", "invalid", "IO", "iOS", "IOT", "ip", "ip address", "IP checksum", "ipad", "iPhone", "IR", "IR Sensors", "IRC", "irq", "is", "ISIS", "iso", "ISO/IEC", "ISP", "ISR", "Issue", "issues", "It", "italic", "ITG3200", "ittraining", "iTunes", "J-Link", "Japan", "Japanese", "Java", "javascript", "Jde", "JPEG", "jQuery", "JSON", "JTAG", "Jumentum", "k20d50m", "K22F", "K64", "K64F", "K66F", "Kam", "KB", "KDS", "keil", "kernel", "key", "keyboard", "keypad", "keyword", "kickstarter", "Kinect", "Kinetis", "kit", "Kit;", "kits", "KL-25Z", "KL05Z", "KL25z", "KL43Z", "kl46z", "kl64f", "KS0108", "KURD", "L053R8", "L152RE", "L293D", "l298n", "L432KC", "l476", "L476RG", "L6235E", "L6470", "labview", "labview2009", "Lack", "LAN", "lan8720", "landscape", "language", "lapack", "laser", "laser cut", "latency", "layout", "LCD", "LCD_ST7735", "LCP11U24", "ldr", "LE", "leak", "learning", "least", "led", "LED blink", "led matrix", "LED1", "LED3", "LEDboard", "LEDscreen", "LEDSflashfast", "LEFT", "LEM", "Level Converter", "level shifting", "level translation", "LF1S022", "LFN", "lib", "LibHumidity", "libmDot", "libmDot-Custom", "libraries", "library", "libs", "Licence", "license", "lifespan", "light", "light sensor", "Like", "limit", "limitations", "limits", "LIN", "line", "line 21", "Line Follower", "line numbers", "linefollow", "link", "LINK_LED", "LINK_SPEED", "linke", "linkedin", "linker", "linker error", "links", "lint", "linux", "lipo", "LiquidCristal", "LiquidWare", "LIS302", "LISA_U200", "listener", "liwp", "LM175", "LM34", "load", "loading", "LocaFileSystem", "Local", "localdisk", "localfile", "LocalFileHandle", "LocalFileSystem", "LocalFileSystem not released", "localflash", "localhost", "localtime", "locks", "lockup", "log", "logging", "logging levels", "logo", "Long", "Look Up Table LOT", "loops", "Lora", "LoRaWAN", "lost", "lost program", "lot", "low", "low power", "low power operation", "low temperature", "low-level", "low-pass", "LPBmini", "LPC", "LPC_CAN", "LPC_MCI", "LPC_MIC", "LPC1114", "LPC1114FN28", "lpc1115", "LPC11U24", "LPC11U35", "LPC11U35-401", "LPC11U67", "LPC11U68", "LPC11U6X", "lpc11uxx", "LPC1549", "LPC15xx", "LPC17", "lpc17_emac.c", "LPC1768", "LPC1768.sct", "LPC1769", "lpc1788", "LPC1857", "LPC18XX", "lpc2368", "LPC23xx.h", "lpc2478", "LPC407x", "LPC4088", "LPC408x", "LPC4337", "lpc43xx", "lpc810max", "LPC812", "LPC824", "LPCmini", "LPCXpresso", "LPCXpresso1549", "LPCxpresso54114", "LSM303", "lt8500", "LTC2400", "LTDC", "lua", "luminosity control", "lwip", "LWIP_TRANSPORT_PPP", "M0", "M2M", "m2p", "m3pi", "m4", "M7", "mac", "MAC address", "mac os", "Machine", "macos", "macro", "Macros", "madplayer", "magic", "magician", "magjack", "magnetics", "magnetometer", "Main", "mainpage", "maintenance", "Make", "makefile", "Makefile;", "maker", "malloc", "MAM", "Management", "manager", "manifest", "Manufacture", "manufacturing", "map", "mapping", "marble run", "markdown", "mask", "mass", "master", "materials", "math", "math.h", "MATLAB", "matrix", "Maturity of mbed", "max", "MAX11110AUT+T", "MAX233", "max32630fthr", "MAX44000", "MAX44000PMB1", "MAX5842", "MAX6675", "MAX6952 LED driver", "Maxim", "maximum", "maze", "mb", "mb90f549", "mbed", "mbed 5.0", "mbed account", "MBED Application Board", "MBED ASSERTION FAILED", "mbed cli", "mbed cloud system", "mbed detect", "mbed ena", "mbed enabled", "mbed firmware", "mbed library", "mbed LPC1768", "mbed online compiler", "mbed online compiler not working", "mbed opencv", "mbed rtos", "mbed SDK", "mbed site", "mbed SPI", "MBED website", "mbed_debug", "mbed_die", "MBED_MICROCONTROLLER", "mbed_official", "mbed_reset", "mbed_rtos", "mbed-cl", "mbed-cli", "mbed-client", "mbed-dev", "mbed-dsp", "MBED-IDE", "MBED-OS", "mbed-rtos", "mbed，移植", "mbed.h", "MBED.HTM", "mbed.lib", "mbed.org", "mbed1768", "mbed2", "mbedchallenge", "mbedlib", "mbedls", "mbedOS", "mbedTLS", "mBuino", "MCP23017", "mcp2551", "MCU", "MCUXpresso", "MD25", "md5", "mdot", "mDot;connection;LED", "mean", "measure", "measurement", "mechatronics", "median", "Medical device", "mega", "MemberFunction", "memory", "memory allocation", "memory error", "Menbed", "menu", "mercurial", "Mesauer", "Mesh", "message", "Meter", "Method", "MHz", "micro", "micro amp", "micro:bit", "Microbit", "microbit-dal", "Microchip", "microlib", "micromouse", "micropython", "microSD", "Microwire", "MID", "MIDI", "mien", "MIFARE", "mikroelektronika", "milliseconds", "MiMic", "mindstorms", "mini", "MiNiFi", "minimu9", "minimum", "miniusb", "Mint", "Mirror", "Missing", "missing include file", "MK20Dx256", "MK64FX512", "mkit", "mkl16z128vfm4", "MMU", "mobile", "mobile phone", "mobileLCD", "Modbus", "modbustcp", "MODDMA", "MODDMA.h", "mode", "model", "modem", "moderation", "MODGPS", "MODI2C", "modifications", "MODSERIAL", "Modula-2", "module", "monitor", "monitor mode", "monitoring", "morpho", "Morse", "Mosi", "mossmann Bluetooth radio", "motion", "motion detection", "motor", "motor control", "motor driver", "motors", "mount", "Mouse", "mouth", "mp3", "mp3player", "mpr121", "MPU-6000", "MPU-6050", "MPU-9250", "MPU6000", "MPU6050", "MQTT", "mRotaryEncoder", "mruby", "mrubyc", "ms5611", "msc", "MSCFileSystem", "MSCUsbHost", "MSD", "MTDOT", "mtu", "multi-core", "multicast", "multilingual", "multiple", "multiple binaries", "multiple devices", "multiplexing", "multitasking", "multitech", "music", "mutex", "mutiplex", "mysql", "N-Key", "n'", "N211", "N2xx", "n64 controller", "Name", "Names", "namespace", "naMote72", "nano", "nanopb", "NanoSocketiWifi", "nanostack", "nationalrail", "navigation", "NB", "NBIoT", "NDS", "Near Field Communication", "needed", "negotiate", "NeoPixel", "nested", "NET", "NetServices", "NetServicesMod", "network", "networking", "NetworkSocketAPI", "new", "new board", "NEW MBED", "new tcp-ip stack", "new users", "newbie", "Newhaven", "newlib", "newlib-nano", "newline", "news", "NFC", "NFS", "NHD-2.4-240320SF-CTXI#-1", "Niggar", "Nimbelink", "NMEA", "NNN40", "No Space in Execution Regions", "Node.js", "nohl", "noise", "Nokia", "Nokia LCD", "Nokia6610", "Non", "non-blocking", "non-public", "non-pulic", "non-volatile memory", "non-volotile", "Noob", "Nordic", "nospam", "not", "not available", "not consecutive sectors", "not mounting", "not working", "Note", "Notebook", "notebook pages", "notebooks", "notes", "notifications", "novice", "NQ620", "nRF2401A", "nRF24L01", "nrf5", "nrf51", "nRF51 SDK", "nrf51 skd", "nRF51-DK", "nRF51422", "nRF51822", "nrf52", "nRF52-DK", "nrf52832", "nRF52840", "NRFFW", "NTAG", "NTP", "ntp server", "ntpdate", "Nucleo", "Nucleo F411RE", "Nucleo L073RZ", "Nucleo-32", "Nucleo-F070RB", "NUCLEO-F072RB", "NUCLEO-F091RC", "NuCleo-F401RE", "NUCLEO-F411RE", "NUCLEO-F746ZG", "NUCLEO-F767ZI", "NUCLEO-IHM02A1", "NUCLEO-L073RZ", "NUCLEO-L476RG", "nucleos", "nulll", "number", "numbers", "numeric", "NVIC", "nvic_systemreset", "NVM", "nxp", "NXP/mbed", "OAuth", "Oberon", "object", "Object Design", "occupancy", "octal", "octopus card", "ODIN　Bluetooth", "of", "offline", "offline compile", "offset", "OLED", "OM13056", "on", "on screen display", "OnDisconnection", "One Wire", "OneWire", "online", "online compiler", "onlinehelp", "oooooooooooooooyyyooooooo", "Op", "Open", "open drain", "open source", "openair", "opencv", "OpenDrain", "OpennNETCF", "openocd", "openSDA", "opensolaris", "opensource", "openssl", "opera", "operators", "Optimization", "options", "Optocoupler", "Orange", "OS", "OS-5", "osc", "OSC_ENA", "oscillator", "Oscilloscope", "osd", "OSEK", "ostream", "OSX", "OTA", "OTG", "OU", "Out", "outage", "output", "outputs", "Outrageous Circuits", "OV7670", "Over", "overflow", "overloading", "P-NUCLEO-IHM001", "P0_15", "P0_3", "p15", "p29", "p2m", "Pachube", "package", "Page", "paho", "pain", "pairing", "PAKET", "pal", "parallax", "Parity", "Parity Character_lenght Bug STM32", "parse", "parts", "Pascal", "Password", "paste", "PATA", "pbuf", "pc", "PC board", "pc-lint", "pc.printf", "PC.scanf():", "PCA9532", "PCB", "PCB design", "PCF8574", "PCF8575", "PCF8575C", "PCLKSEL0", "PCLKSEL1", "PCM2704", "pdf", "performance", "period", "peripheral", "peripheral clock", "permission", "Permission Denied", "persistent", "pfe_csc", "phase", "phi", "phy", "Physical Web", "Pi", "PIC", "PIC32MZ", "picture", "pictures", "PID", "piezo", "Pin", "pin 18.", "pin21", "pin24", "pin25", "pinball", "PinDetect", "PING", "pinmap", "PinNames", "pinou", "pinout", "pins", "Pinsel4", "PIO", "pir", "pixel", "plan", "plastic parts", "platform", "platformio", "player", "playstation", "PLC", "PLC01A1", "PLL0", "PLL1", "Plotting", "Plus One", "PM", "POE", "point cloud", "pointer", "pointers", "polarity", "polarssl", "pollici", "polling", "polohu", "pololu", "polymorphism", "pong", "port", "port expander", "PortIn", "porting", "portpin", "ports", "position contro", "POSIX", "post", "pour", "pow(", "Power", "power consumption", "power factor", "power harvesting", "power management", "power managment", "power over ethernet", "Power Up", "PowerControl", "powerdown", "POWERED-STOP", "Powering", "powerline", "powersource", "PPM", "ppmsum", "PPP", "PPP-Blinky", "prallax", "Precompiled", "preprocessor", "Press", "pressure", "preview", "print", "Printed Circuit Board", "printf", "printout", "priority", "private", "Private message", "prject", "problem", "processing", "Processor_update", "Production", "profile", "program", "program details", "program load", "Programme", "programmer", "programmin", "programming", "project", "project list", "projects", "promiscuous", "Promiscuous mode", "Promisuous mode. Moniter mode", "promotion", "proposal", "prot", "Protected Member Functions", "Protection", "proteus", "proto", "protoboard", "protobuf", "protocol", "prototype", "prototype to hardware", "prototyping", "PS/2", "PS2", "PS3", "PSP", "pstorage", "PTC1", "public", "publish", "published", "publishing", "pulldown", "pullup", "pulse", "PULSE COUNTER", "pulse direction", "Pulse;", "Pulsewidth", "push", "putc", "PuTTY", "pwm", "PwmIn", "PwmOut", "pymite", "pyOCD", "python", "QEI", "qp", "qq", "qrcode", "qsort", "QSP Revue", "Qt Creator", "QtCreator", "QTR-1RC", "quadrature", "quadrocopter", "quality", "quaternions", "questions", "Queue", "quiescent", "quiz", "QVGA", "R", "RA8875", "racing", "Radio", "rail", "rain", "RAM", "range", "RangeFinder", "Rasperry", "rate", "rates", "raw", "RawSerial", "RawSerial.h", "RC", "RC5", "re-entrancy", "read", "read_us", "readdir", "reader", "Reading", "readNB", "real", "real product", "real-time", "realloc", "realtimeclock", "reboot", "rebuild;", "rebuilt", "receive", "recognition", "recognized", "recommend", "recover", "red", "red suite", "RedBearLab", "reference", "Reference code", "reference design", "References", "referencing", "Reflectance", "refrence", "Register", "Registered", "registers", "registration", "regression", "regulator", "reinvoke_isp", "Relay", "relays", "remote", "remote data collection", "Remote LCD", "Removal", "remove", "rename", "Renesas", "REPL", "replace", "replace all", "Réponses", "Report", "Repository", "repository server error", "reprogram", "reqgqr't&", "requested", "reset", "Reset Button", "resistor", "Resize", "resolved", "response", "retrieval", "Retrieving", "Return Code 9", "Returntype int", "reuse", "reverse", "review", "revision", "revision 140", "revisions", "rf", "RF4463PRO", "RFID", "rfm12", "RFM12B", "RFM95", "RFM95W", "rgb", "ribbon", "RIGHT", "Rigol", "rise", "rise()", "RIT", "rj45", "rld", "rmdir", "RMII", "rms", "RN-XV", "rn41", "roadmap", "robo3001", "RoboClaw", "robodog", "robot", "Robotics", "robotis", "rollover", "ROM", "root", "ROSMbed", "rosserial", "rotary", "rotate", "router", "routine", "Routing", "rover", "rpc", "RPCFunction", "RPCVariable", "RPG", "RS-232", "RS-485", "rs232", "RS485", "RSA", "rss", "rssi", "RTC", "rtos", "Rtostimer", "RTS", "RTX", "ruby", "rugged", "rules", "rx", "RX-64", "RxIrq", "rxtx", "RZ/A1H", "s", "s110", "S130", "SAA1064", "sabirin", "Safari", "SALE", "SAM", "SAMD21", "sampling", "sampling time.", "Save", "save as", "SC16IS750", "SCA3000", "scanf", "scanner", "Scanning Matrix", "scatter file", "Scheduler", "Schematics", "Science", "sclk", "scmRTOS", "scope", "scp1000", "SCR", "Scratch", "screen", "script", "Scroll", "SD", "SD Card", "SD-Card", "SDA", "SDCard", "SDFileSystem", "SDFileSystem Library", "SDFileSystemSystem", "SDHC", "sdhcfilesystem", "SDK", "sdram", "SE95D", "search", "Sections of Aggregate Size", "secure", "secure boot", "security", "Seeed Arch Max", "Seeedstudio", "Segger", "segment", "segway", "select", "selection", "semaphore", "semihost", "semihosting", "Send", "sensor", "sensors", "sensors_reader", "SERCOM", "Serial", "Serial Comm", "Serial Flash", "serial interrupt", "Serial LCD Library", "Serial Number", "Serial P", "serial port", "serial_api.h", "serial_example_2", "SERIAL_RX", "SERIAL_TX", "serial.attach", "serial.getc()", "Serial.h", "serial.readable()", "SerialHalfDuplex", "SerialPC", "server", "service", "servlet", "Servo", "servos", "set", "set_link()", "setting", "Setup", "SETUP.cpp", "SGTL5000", "SHA", "shain", "Shared resources", "Sharing", "Sharp", "Sheet", "shield", "shirt", "shock", "shoes", "shopping", "short", "shortcut", "show", "Show/hide", "SID", "SIFT", "signal", "signal processing", "Signals", "signature", "SiliconSensingDMU", "SIM", "SIM900", "SimpeSerialProtocol", "SimpleSocket", "simplespirit1", "Simplicity", "SimplicityStudio", "Simulator", "Simulink", "sin", "single axis", "single thread", "single-step", "sink", "siri", "size", "Skywire", "SLAM", "slave", "Sleep", "SLIP", "slow", "slow clock rate", "slow GPIO", "smart", "smartphone", "smd", "SMS", "SMS shoulder tap", "SMT", "SMT32", "SMTP", "SNES", "SNIFFER", "snip", "snippets", "SNMP", "SNMP;", "socket", "sockets", "Sof_event", "softdevice", "software", "software Uart", "solar", "solaris", "some", "sorry", "sound", "SoundRecorder", "source", "source code", "sourcery", "Sourcery;", "SP14Q002", "space", "spaces", "sparkfun", "SparkFun MicroSD Breakout Board", "Spartan 3E", "SPDIF", "speaker", "specification", "speech", "Speed", "SPI", "spi 10mhz", "SPI input", "SPI master", "SPI Slave", "SPI3", "spice", "spirit1", "SPISlave", "spree", "sprintf", "SPWFSA01", "SQL", "SQLite", "square", "sram", "SRF08", "ssb", "sscanf", "SSD1963", "SSH", "SSI", "SSL", "SSP", "SST", "ST", "ST Nucleo F072RB", "ST Nucleo F302R8", "ST Nucleo F401RE", "ST Nucleo F411RE", "ST Nucleo L053R8", "ST-LINK", "st7580", "stable", "stack", "Stamp", "standalone", "standard", "star", "StarBoard", "start", "starter", "starters", "startup", "State", "State Machine", "state machines", "statement", "static", "status", "std::string", "std:string", "stderr", "stdio", "stdout", "STEM", "stemwin", "Step", "step direction", "Stepper", "stepper motor", "Stick", "STlink", "STM", "stm32", "STM32 Bugs", "STM32F", "stm32F030", "stm32f030k6", "STM32F1", "STM32F103", "STM32F103C8T6", "STM32F103CT6", "STM32F103RB", "STM32F3", "STM32F303K8", "STM32F334R8", "STM32F4", "STM32F401RE", "STM32F407", "STM32F407VET6", "STM32F411RE", "stm32f42", "STM32F429", "STM32F446", "STM32F469", "STM32F4xx", "STM32F7", "STM32F746", "STM32F746NG-DISCO", "stm32f767", "STM32L", "stm32l0", "STM32L1", "stm32l151ccu6", "STM32L432KC", "STM334", "stop", "stop bit", "stops working", "storage", "strange", "Strange Error", "strcpy", "stream", "stretching", "string", "strtod", "strtof", "strtol", "structure", "structures", "student", "Studio", "suart", "Subscriptions", "substr", "Subsystem", "suggestion", "suggestions", "SumoBot", "super", "super capacitor", "supply", "Support", "SURF", "survey", "suspend", "SVC", "svn", "SWD", "switch", "switcher", "SWL", "SX1272", "SX1272MB2xAS", "SX1276", "symbols", "sync", "synchronize", "Syncronised", "Synergy", "syntax", "synth", "synthesizer", "System", "SystemInit", "SysTick", "t-shirt", "tab", "table", "tabs", "Tag", "tai", "talkie", "target", "task", "task number", "TCP", "tcp/ip", "TCP/IP over VCP", "TCPS", "TCPSocket", "TCPSocketConnection", "TCPSocketServer", "team", "teensy", "Telemetry", "Telnet", "Telnet server", "Temperature", "Template", "tera", "Tera Term", "TeraTerm", "term", "Terminal", "test", "Testbed", "testing", "text", "TextLCD", "TextStar", "TFT", "TFT 2.8", "TFTP", "the", "thermoelectric", "things", "thread", "Thread.start", "threads", "TI", "Ticker", "ticks", "time", "time saving or time consuming", "time-triggered", "timeline", "Timeout", "timer", "timer2", "timer3", "timers", "timing", "TINF", "Tiny Webserver", "tinyclr", "tip", "Tiva", "tlc5940", "TLS", "TLV1572", "TLV320", "TM1638", "TMP102", "to", "to_do_list", "to?", "Toggle", "tolerant", "tollos", "tool", "toolchain", "toolchain;", "toshiba-tmpm", "touch", "touch input", "touchpad", "Touchscreen", "TP3", "tracker", "training", "Transceivers", "transfer", "transfer speed", "translation", "translator", "transmit", "travail", "tri-state", "triac", "trigger", "Trigonometric", "trimble", "troub", "troubleshooting", "try catch", "TSL2560", "TSL2561", "TTL", "ttyACM0", "turn", "tutorial", "twitter", "TwitterExample", "Two", "Tx", "txt", "TY51822r3", "typedef", "typos", "u-blox", "uA", "UART", "UART0", "UART3", "uartsb", "uav", "ubertooth", "ublox", "Ubuntu", "UDP", "UDPSocket", "UI", "UIPEthernet", "ultrasonic", "UM6", "uml", "umts", "UMTSStick", "undefined", "undefined references", "undo", "unicode", "unique", "unistd", "unit", "unix", "Unknown", "unlock", "unmount", "unresponsive", "unseren", "unsigned int", "unstable", "up", "update", "updates", "UPGRADE", "Upload", "uploading", "UPnP", "url", "usability", "usage", "usart", "USB", "USB connector", "USB device", "USB Host", "USB memory", "USB MSC", "usb prober", "USB to CAN", "USB_CDC_MSD_Hello", "USB_MSD", "USB_VBUS", "USB-stick", "USB2CAN", "USB3.0", "USBA", "USBB", "usbcdc", "USBD480", "USBDAC", "USBDevice", "USBHID", "USBHOST", "USBHostDac_example", "USBHostMSD", "USBIsochronous", "USBKeyboard", "USBMIDI", "USBMouse", "USBMSD", "usbrx", "usbserial", "usbtx", "USBUDCAH", "USBカメラ", "use", "user", "username", "users", "utf 8", "utf-8", "UUID", "uV5", "UVC;", "uvision", "uvisor", "V OUT", "v138", "Valid", "variable", "variable allocation", "variables", "vars", "VB", "VB.NET", "VB6", "VCP", "vector", "vector.cc", "vehicle", "Venus", "verification", "verify", "version", "version control", "versus", "VGA", "vibration", "vibration detection", "VID", "video", "Vin", "virtual", "Virtual comm port over STLink", "virtual disk", "virus", "visa", "vista", "Visual", "Visual Basic", "Visual Studio", "visualgdb", "VMWare", "Vodafone", "Vodafonemodem", "voich", "volatile", "voltage", "volume", "volunteer", "VOUT", "vprintf", "vscode", "VSYNC", "VU", "w5100", "W5500", "W5UXH", "wait", "wait_us", "wait()", "wake on LAN", "wake on movement", "wake on SMS", "wake up", "wakeup", "walkie", "wallbot", "warning", "warnings", "watchdog", "wav", "wave", "WavePlayer", "waveshare", "wchar", "WDT", "we", "weak", "wearable", "weather", "Web", "webfs", "webserver", "website", "WebSocket", "Websockets", "welcome", "What", "wheel", "while loop", "while(1)", "Wi-Fi", "WiConnect", "width", "wifi", "WiFly", "Wii", "Wii60", "wiimote", "wiki", "William", "Win10", "Win2000", "win7", "Win8.1", "wind", "window", "windows", "Windows 7", "Windows serial configuration", "Windows Serial Driver", "Windows10", "windows7", "Windows8", "wireless", "wiring", "wirless", "wirstband", "with", "Wixel", "Wiznet", "Wonder", "WonderGecko", "work", "workflow", "working", "workshop", "workspace", "world", "write", "writeable", "writer", "wrong", "ws2801", "wt32", "wtf", "wwdt", "WYSIWYG", "X", "x_Nucleo_PLC01A1", "X-10", "X-Nucleo", "X-NUCLEO-IDW01M1", "X-NUCLEO-IHM07M1", "X-NUCLEO-IKS01A1", "X.509 Error", "xbeat", "xbee", "XBeePro", "Xbox", "Xbox 360", "xDot", "xively", "xml", "XP", "Xpresso", "XTAL", "y5design", "YEI", "yellow", "yosemite", "yotta", "You Tube", "ZeroG", "zigbee", "zip", "zip export", "Zumo"], {
+                width: 150,
+                max: 10,
+                multiple: true,
+                multipleSeparator: ",",
+                scroll: true,
+                scrollHeight: 300,
+            });
+            </script>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <label for="captcha">Are you human?</label>
+                    
+                    <div class="g-recaptcha" data-sitekey="6LeUkDEUAAAAAA0Bjzjr0CJouW_NEUziPS-R-u5F"><div style="width: 304px; height: 78px;"><div><iframe src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/anchor.html" width="304" height="78" role="presentation" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "></textarea></div></div>
+
+<script>
+    if (hasRecaptured === undefined) {
+        var hasRecaptured = false;
+
+        var initAllRecaptcha = function() {
+            if (!hasRecaptured) {
+                $('document').ready(function() {
+                    $('.g-recaptcha').each(function (i, captcha) {
+                        grecaptcha.render(captcha, {
+                            'sitekey' : '6LeUkDEUAAAAAA0Bjzjr0CJouW_NEUziPS-R-u5F'
+                        });
+                    });
+                });
+                hasRecaptured = true;
+            };
+        };
+    };
+ </script>
+
+<script src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/api.js.下载" async="" defer=""></script>
+
+                </td>
+            </tr>
+            
+            <tr><td>
+                <input type="submit" name="submit" class="button large" style="font-weight: bold; margin-top: 5px;" value="Post new topic"> &nbsp;
+                <input type="button" href="#" onclick="return false;" id="preview" class="button secondary" value="Show preview">  <span id="loading"></span> &nbsp;
+            </td></tr>
+        </tbody></table>
+    </form>
+</div>
+
+                
+            
+        
+
+
+        
+    </div>
+</div>
+
+
+    
+
+
+
+    </div>
+
+    <div class="three columns sidebar ">
+        
+    
+    <img src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/2857-04.jpg.200x200_q85.jpg" width="200" height="150">
+
+    
+
+
+    
+
+    
+    
+    
+
+    
+
+
+    </div>
+</div>
+
+
+    <div class="row footer hide-on-print">
+        <div class="twelve columns">
+            <hr>
+            <ul>
+                <li>© Mbed</li>
+                <li><a href="https://os.mbed.com/blog">blog</a></li>
+                <li><a href="https://www.mbed.com/en/about-mbed/jobs/">we're hiring!</a></li>
+                <li><a href="https://os.mbed.com/support/">support</a></li>
+                <li><a href="https://mbed.status.io/">service status</a></li>
+                <li><a href="https://os.mbed.com/privacy">privacy policy</a></li>
+                <li><a href="https://os.mbed.com/terms">terms and conditions</a></li>
+                <li><a href="https://www.arm.com/company/policies/cookies">cookies</a></li>
+                <li><a href="https://www.arm.com/company/policies/trademarks">trademarks</a></li>
+            </ul>
+       </div>
+	</div>
+
+
+
+<script type="text/javascript">
+    document.write(unescape("%3Cscript src='//munchkin.marketo.net/munchkin-beta.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/munchkin-beta.js.下载" type="text/javascript"></script>
+<script>Munchkin.init("312-SAX-488");</script>
+
+
+
+
+    <div id="cookiemodule">
+    <h5>Important Information for this Arm website</h5>
+    <div id="cookiecontent">
+        <p>
+            This site uses cookies to store information on your computer.
+            By continuing to use our site, you consent to our cookies.
+            If you are not happy with the use of these cookies, please review our
+            <a href="https://www.arm.com/company/policies/cookies">Cookie Policy</a>
+            to learn how they can be disabled.
+            By disabling cookies, some features of the site will not work.
+        </p>
+        <button class="accept-cookie">Accept and hide this message</button>
+    </div>
+</div>
+
+<script src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/cookie_law.js.下载"></script>
+
+
+
+<div id="flag-content" class="reveal-modal small">
+    <h2>Report Content</h2>
+    <a class="close-reveal-modal">×</a>
+    <form action="https://os.mbed.com/components/SHT31-D/" method="post" id="flag-content-form">
+        <input type="hidden" name="csrfmiddlewaretoken" value="mEB42ouFSHfBr8EXCfWMXXFY8u6GCK90">
+        <ul>
+            <li>
+                <label for="id_reason_1">
+                    <input id="id_reason_1" name="reason" type="radio" value="1">
+                    Spam
+                </label>
+            </li>
+            <li>
+                <label for="id_reason_2">
+                    <input id="id_reason_2" name="reason" type="radio" value="2">
+                    Inappropriate
+                </label>
+            </li>
+        </ul>
+        <a class="button secondary cancel-flag">Cancel</a>
+        <input type="submit" value="Report" class="button">
+    </form>
+</div>
+
+<div id="access-warning-modal" class="reveal-modal">
+    <h2>Access Warning</h2>
+    <p>You do not have the correct permissions to perform this operation. Please, contact us at support@mbed.com to gain full access.</p>
+    <a class="close-reveal-modal">×</a>
+</div>
+
+
+
+
+
+<div style="background-color: #fff; border: 1px solid #ccc; box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2); position: absolute; left: 0px; top: -10000px; transition: visibility 0s linear 0.3s, opacity 0.3s linear; opacity: 0; visibility: hidden; z-index: 2000000000;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: #fff; opacity: 0.05;  filter: alpha(opacity=5)"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0; height: 0; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0; height: 0; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;"><iframe title="recaptcha 驗證問題" src="./SHT31-D Temperature &amp; Humidity Sensor _ Mbed_files/bframe.html" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" name="zbcqm7k7qj1q" style="width: 100%; height: 100%;"></iframe></div></div></body></html>
