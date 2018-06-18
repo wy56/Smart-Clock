@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\BUILD\Nucleo_printf.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\BUILD\Nucleo_printf.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Wed Jun 13 00:42:25 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Sun Jun 17 19:42:09 2018
 <BR><P>
 <H3>Maximum Stack Usage =        736 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -21,14 +21,16 @@ Mutually Recursive functions
  <LI><a href="#[18]">PendSV_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[18]">PendSV_Handler</a><BR>
  <LI><a href="#[19]">SysTick_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[19]">SysTick_Handler</a><BR>
  <LI><a href="#[2c]">ADC_IRQHandler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[2c]">ADC_IRQHandler</a><BR>
- <LI><a href="#[1c6]">core_util_critical_section_enter</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[195]">mbed_assert_internal</a><BR>
- <LI><a href="#[19e]">serial_baud</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[1d3]">init_uart</a><BR>
- <LI><a href="#[132]">_sys_write</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[19d]">serial_init</a><BR>
- <LI><a href="#[1c8]">mbed_error_vfprintf</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[19d]">serial_init</a><BR>
- <LI><a href="#[1c7]">core_util_critical_section_exit</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[195]">mbed_assert_internal</a><BR>
- <LI><a href="#[19d]">serial_init</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[195]">mbed_assert_internal</a><BR>
- <LI><a href="#[1cf]">pin_mode</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[195]">mbed_assert_internal</a><BR>
- <LI><a href="#[1cb]">pin_function</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[195]">mbed_assert_internal</a><BR>
+ <LI><a href="#[1c8]">core_util_critical_section_enter</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[194]">mbed_assert_internal</a><BR>
+ <LI><a href="#[1a0]">serial_baud</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[1d5]">init_uart</a><BR>
+ <LI><a href="#[132]">_sys_write</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[19f]">serial_init</a><BR>
+ <LI><a href="#[1ca]">mbed_error_vfprintf</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[19f]">serial_init</a><BR>
+ <LI><a href="#[1c9]">core_util_critical_section_exit</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[194]">mbed_assert_internal</a><BR>
+ <LI><a href="#[19f]">serial_init</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[194]">mbed_assert_internal</a><BR>
+ <LI><a href="#[1d1]">pin_mode</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[194]">mbed_assert_internal</a><BR>
+ <LI><a href="#[1cd]">pin_function</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[194]">mbed_assert_internal</a><BR>
+ <LI><a href="#[195]">wait_clock(double)</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[197]">min_click()</a><BR>
+ <LI><a href="#[193]">hour_click()</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[195]">wait_clock(double)</a><BR>
 </UL>
 <P>
 <H3>
@@ -246,9 +248,9 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
 </UL>
 
-<P><STRONG><a name="[1da]"></a>__scatterload_rt2_thumb_only</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<P><STRONG><a name="[1dc]"></a>__scatterload_rt2_thumb_only</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 
-<P><STRONG><a name="[1db]"></a>__scatterload_null</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<P><STRONG><a name="[1dd]"></a>__scatterload_null</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 
 <P><STRONG><a name="[c8]"></a>__scatterload_copy</STRONG> (Thumb, 26 bytes, Stack size unknown bytes, __scatter_copy.o(!!handler_copy), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
@@ -256,7 +258,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
 </UL>
 
-<P><STRONG><a name="[1dc]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
+<P><STRONG><a name="[1de]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
 
 <P><STRONG><a name="[c9]"></a>_printf_n</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, _printf_n.o(.ARM.Collect$$_printf_percent$$00000001))
 <BR><BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_charcount
@@ -301,7 +303,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_hex
 </UL>
 
-<P><STRONG><a name="[1dd]"></a>_printf_ll</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, _printf_ll.o(.ARM.Collect$$_printf_percent$$00000007))
+<P><STRONG><a name="[1df]"></a>_printf_ll</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, _printf_ll.o(.ARM.Collect$$_printf_percent$$00000007))
 
 <P><STRONG><a name="[d3]"></a>_printf_i</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, _printf_i.o(.ARM.Collect$$_printf_percent$$00000008))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72 + Unknown Stack Size
@@ -373,7 +375,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_ll_hex
 </UL>
 
-<P><STRONG><a name="[1de]"></a>_printf_l</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, _printf_l.o(.ARM.Collect$$_printf_percent$$00000012))
+<P><STRONG><a name="[1e0]"></a>_printf_l</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, _printf_l.o(.ARM.Collect$$_printf_percent$$00000012))
 
 <P><STRONG><a name="[e3]"></a>_printf_c</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, _printf_c.o(.ARM.Collect$$_printf_percent$$00000013))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40 + Unknown Stack Size
@@ -403,7 +405,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_wstring
 </UL>
 
-<P><STRONG><a name="[1df]"></a>_printf_percent_end</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, _printf_percent_end.o(.ARM.Collect$$_printf_percent$$00000017))
+<P><STRONG><a name="[1e1]"></a>_printf_percent_end</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, _printf_percent_end.o(.ARM.Collect$$_printf_percent$$00000017))
 
 <P><STRONG><a name="[fc]"></a>__rt_lib_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit.o(.ARM.Collect$$libinit$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_li
@@ -420,19 +422,19 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_init_alloc
 </UL>
 
-<P><STRONG><a name="[1e0]"></a>__rt_lib_init_preinit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000004))
+<P><STRONG><a name="[1e2]"></a>__rt_lib_init_preinit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000004))
 
-<P><STRONG><a name="[1e1]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000A))
+<P><STRONG><a name="[1e3]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000A))
 
 <P><STRONG><a name="[ef]"></a>__rt_lib_init_lc_common</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000F))
 <BR><BR>[Calls]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_locale
 </UL>
 
-<P><STRONG><a name="[1e2]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000E))
+<P><STRONG><a name="[1e4]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000E))
 
-<P><STRONG><a name="[1e3]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
+<P><STRONG><a name="[1e5]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
 
-<P><STRONG><a name="[1e4]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000011))
+<P><STRONG><a name="[1e6]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000011))
 
 <P><STRONG><a name="[f1]"></a>__rt_lib_init_lc_ctype_2</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000012))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
@@ -441,9 +443,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_get_lc_ctype
 </UL>
 
-<P><STRONG><a name="[1e5]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
+<P><STRONG><a name="[1e7]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
 
-<P><STRONG><a name="[1e6]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
+<P><STRONG><a name="[1e8]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
 
 <P><STRONG><a name="[f2]"></a>__rt_lib_init_lc_numeric_2</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000016))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
@@ -452,19 +454,19 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_get_lc_numeric
 </UL>
 
-<P><STRONG><a name="[1e7]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
+<P><STRONG><a name="[1e9]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
 
-<P><STRONG><a name="[1e8]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
+<P><STRONG><a name="[1ea]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
 
-<P><STRONG><a name="[1e9]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
+<P><STRONG><a name="[1eb]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
 
-<P><STRONG><a name="[1ea]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
+<P><STRONG><a name="[1ec]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
 
-<P><STRONG><a name="[1eb]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
+<P><STRONG><a name="[1ed]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
 
-<P><STRONG><a name="[1ec]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
+<P><STRONG><a name="[1ee]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
 
-<P><STRONG><a name="[1ed]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
+<P><STRONG><a name="[1ef]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
 
 <P><STRONG><a name="[f4]"></a>__rt_lib_init_stdio_2</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000024))
 <BR><BR>[Stack]<UL><LI>Max Depth = 664 + Unknown Stack Size
@@ -473,9 +475,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_initio
 </UL>
 
-<P><STRONG><a name="[1ee]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
+<P><STRONG><a name="[1f0]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
 
-<P><STRONG><a name="[1ef]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002C))
+<P><STRONG><a name="[1f1]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002C))
 
 <P><STRONG><a name="[f6]"></a>__rt_lib_init_cpp_2</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000031))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16 + Unknown Stack Size
@@ -484,26 +486,26 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cpp_initialize__aeabi_
 </UL>
 
-<P><STRONG><a name="[1f0]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
+<P><STRONG><a name="[1f2]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
 
-<P><STRONG><a name="[1f1]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))
+<P><STRONG><a name="[1f3]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))
 
-<P><STRONG><a name="[1f2]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000032))
+<P><STRONG><a name="[1f4]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000032))
 
-<P><STRONG><a name="[1f3]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000033))
+<P><STRONG><a name="[1f5]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000033))
 
 <P><STRONG><a name="[c6]"></a>__rt_entry</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry.o(.ARM.Collect$$rtentry$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
 <LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_rt2
 </UL>
 
-<P><STRONG><a name="[1f4]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))
+<P><STRONG><a name="[1f6]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))
 
 <P><STRONG><a name="[f7]"></a>__rt_entry_sh</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry4.o(.ARM.Collect$$rtentry$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[1f5]"></a>__rt_lib_shutdown_stdio_2</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))
+<P><STRONG><a name="[1f7]"></a>__rt_lib_shutdown_stdio_2</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))
 
 <P><STRONG><a name="[f9]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000008))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104 + Unknown Stack Size
@@ -517,19 +519,19 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[fd]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
-<BR><BR>[Stack]<UL><LI>Max Depth = 608 + Unknown Stack Size
-<LI>Call Chain = __rt_entry_main &rArr; main &rArr; $Super$$main &rArr; reset_zero() &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 632 + Unknown Stack Size
+<LI>Call Chain = __rt_entry_main &rArr; main &rArr; $Super$$main &rArr; reset_clock() &rArr; min_click() &rArr; wait_clock(double) &rArr;  min_click() (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
 <LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[1f6]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
+<P><STRONG><a name="[1f8]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
 
 <P><STRONG><a name="[10]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_stm32f769xx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f769xx.o(RESET)
 </UL>
-<P><STRONG><a name="[1f7]"></a>_maybe_terminate_alloc</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, maybetermalloc1.o(.emb_text), UNUSED)
+<P><STRONG><a name="[1f9]"></a>_maybe_terminate_alloc</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, maybetermalloc1.o(.emb_text), UNUSED)
 
 <P><STRONG><a name="[11]"></a>NMI_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_stm32f769xx.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NMI_Handler
@@ -933,8 +935,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sputc
 <LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_common
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_error_vfprintf
-<LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_error_printf
+<BR>[Called By]<UL><LI><a href="#[1ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_error_vfprintf
+<LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_error_printf
 </UL>
 
 <P><STRONG><a name="[106]"></a>__2sprintf</STRONG> (Thumb, 38 bytes, Stack size 32 bytes, __2sprintf.o(.text))
@@ -944,7 +946,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sputc
 <LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_common
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::Stream::Stream__sub_object(const char*)
+<BR>[Called By]<UL><LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::Stream::Stream__sub_object(const char*)
 </UL>
 
 <P><STRONG><a name="[107]"></a>_printf_longlong_hex</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, _printf_hex_int_ll_ptr.o(.text))
@@ -1045,7 +1047,7 @@ Global Symbols
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;freopen
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::Stream::Stream__sub_object(const char*)
+<BR>[Called By]<UL><LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::Stream::Stream__sub_object(const char*)
 </UL>
 
 <P><STRONG><a name="[11a]"></a>setbuf</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, setbuf.o(.text))
@@ -1053,7 +1055,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setvbuf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::mbed_set_unbuffered_stream(std::__FILE*)
+<BR>[Called By]<UL><LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::mbed_set_unbuffered_stream(std::__FILE*)
 </UL>
 
 <P><STRONG><a name="[116]"></a>_fclose_internal</STRONG> (Thumb, 76 bytes, Stack size 32 bytes, fclose.o(.text))
@@ -1068,54 +1070,54 @@ Global Symbols
 <LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;freopen
 </UL>
 
-<P><STRONG><a name="[1aa]"></a>fclose</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, fclose.o(.text))
+<P><STRONG><a name="[1ac]"></a>fclose</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, fclose.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = fclose
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::Stream::~Stream__sub_object()
 </UL>
 
-<P><STRONG><a name="[1ae]"></a>strlen</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, strlen.o(.text))
+<P><STRONG><a name="[1b0]"></a>strlen</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, strlen.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = strlen
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileBase::lookup(const char*, unsigned)
+<BR>[Called By]<UL><LI><a href="#[1ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileBase::lookup(const char*, unsigned)
 </UL>
 
-<P><STRONG><a name="[1ad]"></a>strncmp</STRONG> (Thumb, 150 bytes, Stack size 16 bytes, strncmp.o(.text))
+<P><STRONG><a name="[1af]"></a>strncmp</STRONG> (Thumb, 150 bytes, Stack size 16 bytes, strncmp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = strncmp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileBase::lookup(const char*, unsigned)
+<BR>[Called By]<UL><LI><a href="#[1ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileBase::lookup(const char*, unsigned)
 </UL>
 
 <P><STRONG><a name="[18b]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_memcpy4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_init
+<BR>[Called By]<UL><LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_init
 <LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_SetVector
 </UL>
 
-<P><STRONG><a name="[1f8]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
+<P><STRONG><a name="[1fa]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
 
-<P><STRONG><a name="[1f9]"></a>__rt_memcpy_w</STRONG> (Thumb, 100 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
+<P><STRONG><a name="[1fb]"></a>__rt_memcpy_w</STRONG> (Thumb, 100 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
 
-<P><STRONG><a name="[1fa]"></a>_memcpy_lastbytes_aligned</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memcpy_w.o(.text), UNUSED)
+<P><STRONG><a name="[1fc]"></a>_memcpy_lastbytes_aligned</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memcpy_w.o(.text), UNUSED)
 
 <P><STRONG><a name="[119]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 4 bytes, rt_memclr_w.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = __aeabi_memclr4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::I2C::I2C(PinName, PinName)
-<LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::SerialBase::SerialBase(PinName, PinName, int)
+<BR>[Called By]<UL><LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::I2C::I2C(PinName, PinName)
+<LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::SerialBase::SerialBase(PinName, PinName, int)
 <LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_initio
 <LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fclose_internal
 <LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fopen
 </UL>
 
-<P><STRONG><a name="[1fb]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 4 bytes, rt_memclr_w.o(.text), UNUSED)
+<P><STRONG><a name="[1fd]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 4 bytes, rt_memclr_w.o(.text), UNUSED)
 
-<P><STRONG><a name="[1fc]"></a>__rt_memclr_w</STRONG> (Thumb, 78 bytes, Stack size 4 bytes, rt_memclr_w.o(.text), UNUSED)
+<P><STRONG><a name="[1fe]"></a>__rt_memclr_w</STRONG> (Thumb, 78 bytes, Stack size 4 bytes, rt_memclr_w.o(.text), UNUSED)
 
-<P><STRONG><a name="[1fd]"></a>_memset_w</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memclr_w.o(.text), UNUSED)
+<P><STRONG><a name="[1ff]"></a>_memset_w</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memclr_w.o(.text), UNUSED)
 
-<P><STRONG><a name="[1bb]"></a>strcmp</STRONG> (Thumb, 104 bytes, Stack size 0 bytes, strcmpv7m_pel.o(.text))
+<P><STRONG><a name="[1bd]"></a>strcmp</STRONG> (Thumb, 104 bytes, Stack size 0 bytes, strcmpv7m_pel.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_open
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_get_lc_ctype
 <LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_get_lc_numeric
@@ -1127,7 +1129,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init_cpp_2
 </UL>
 
-<P><STRONG><a name="[1a8]"></a>__aeabi_vec_dtor</STRONG> (Thumb, 34 bytes, Stack size 24 bytes, aeabi_vec_dtor_noexceptions.o(.text))
+<P><STRONG><a name="[1aa]"></a>__aeabi_vec_dtor</STRONG> (Thumb, 34 bytes, Stack size 24 bytes, aeabi_vec_dtor_noexceptions.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __aeabi_vec_dtor
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::Serial::~Serial()
@@ -1139,9 +1141,9 @@ Global Symbols
 <LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_init_alloc
 </UL>
 
-<P><STRONG><a name="[1fe]"></a>__use_no_heap</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, hguard.o(.text), UNUSED)
+<P><STRONG><a name="[200]"></a>__use_no_heap</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, hguard.o(.text), UNUSED)
 
-<P><STRONG><a name="[1ff]"></a>__heap$guard</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, hguard.o(.text), UNUSED)
+<P><STRONG><a name="[201]"></a>__heap$guard</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, hguard.o(.text), UNUSED)
 
 <P><STRONG><a name="[b]"></a>_terminate_user_alloc</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, init_alloc.o(.text), UNUSED)
 
@@ -1254,13 +1256,13 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vsprintf
+<BR>[Called By]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vsprintf
+<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 
 <P><STRONG><a name="[89]"></a>_sputc</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, _sputc.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vsprintf
+<BR><BR>[Called By]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vsprintf
+<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 <BR>[Address Reference Count : 2]<UL><LI> __2sprintf.o(.text)
 <LI> vsprintf.o(.text)
@@ -1342,7 +1344,7 @@ Global Symbols
 <LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_do_fflush
 </UL>
 
-<P><STRONG><a name="[200]"></a>fseek</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, fseek.o(.text), UNUSED)
+<P><STRONG><a name="[202]"></a>fseek</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, fseek.o(.text), UNUSED)
 
 <P><STRONG><a name="[11b]"></a>setvbuf</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, setvbuf.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = setvbuf
@@ -1429,7 +1431,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> scanf_char.o(.text)
 </UL>
-<P><STRONG><a name="[201]"></a>__lib_sel_fp_printf</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, _printf_fp_dec.o(.text), UNUSED)
+<P><STRONG><a name="[203]"></a>__lib_sel_fp_printf</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, _printf_fp_dec.o(.text), UNUSED)
 
 <P><STRONG><a name="[13f]"></a>_printf_fp_dec_real</STRONG> (Thumb, 620 bytes, Stack size 104 bytes, _printf_fp_dec.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 320<LI>Call Chain = _printf_fp_dec_real &rArr; _fp_digits &rArr; _btod_etento &rArr; _btod_emul &rArr; _e2e
@@ -1521,7 +1523,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fseek
 </UL>
 
-<P><STRONG><a name="[202]"></a>ftell</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, ftell.o(.text), UNUSED)
+<P><STRONG><a name="[204]"></a>ftell</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, ftell.o(.text), UNUSED)
 
 <P><STRONG><a name="[128]"></a>_wcrtomb</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, _wcrtomb.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = _wcrtomb &rArr; __rt_ctype_table
@@ -1600,9 +1602,9 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ftell_internal
 </UL>
 
-<P><STRONG><a name="[203]"></a>__errno</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_errno_addr.o(.text), UNUSED)
+<P><STRONG><a name="[205]"></a>__errno</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_errno_addr.o(.text), UNUSED)
 
-<P><STRONG><a name="[204]"></a>__rt_errno_addr</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_errno_addr.o(.text), UNUSED)
+<P><STRONG><a name="[206]"></a>__rt_errno_addr</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_errno_addr.o(.text), UNUSED)
 
 <P><STRONG><a name="[141]"></a>_printf_fp_infnan</STRONG> (Thumb, 112 bytes, Stack size 24 bytes, _printf_fp_infnan.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = _printf_fp_infnan &rArr; _printf_post_padding
@@ -1655,11 +1657,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__default_signal_display
 </UL>
 
-<P><STRONG><a name="[205]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[207]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[206]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[208]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[207]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, indicate_semi.o(.text), UNUSED)
+<P><STRONG><a name="[209]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, indicate_semi.o(.text), UNUSED)
 
 <P><STRONG><a name="[13c]"></a>_btod_d2e</STRONG> (Thumb, 62 bytes, Stack size 0 bytes, btod.o(CL$$btod_d2e))
 <BR><BR>[Calls]<UL><LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_d2e_norm_op1
@@ -1717,8 +1719,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[fe]"></a>main</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, retarget.o(i.$Sub$$main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 608 + Unknown Stack Size
-<LI>Call Chain = main &rArr; $Super$$main &rArr; reset_zero() &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 632 + Unknown Stack Size
+<LI>Call Chain = main &rArr; $Super$$main &rArr; reset_clock() &rArr; min_click() &rArr; wait_clock(double) &rArr;  min_click() (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_main
 <LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;$Super$$main
@@ -1768,18 +1770,18 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f769xx.o(RESET)
 </UL>
-<P><STRONG><a name="[1bf]"></a>HAL_ADC_ConfigChannel</STRONG> (Thumb, 442 bytes, Stack size 20 bytes, stm32f7xx_hal_adc.o(i.HAL_ADC_ConfigChannel))
+<P><STRONG><a name="[1c1]"></a>HAL_ADC_ConfigChannel</STRONG> (Thumb, 442 bytes, Stack size 20 bytes, stm32f7xx_hal_adc.o(i.HAL_ADC_ConfigChannel))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = HAL_ADC_ConfigChannel
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_read
+<BR>[Called By]<UL><LI><a href="#[1c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_read
 </UL>
 
-<P><STRONG><a name="[1c1]"></a>HAL_ADC_GetState</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f7xx_hal_adc.o(i.HAL_ADC_GetState))
-<BR><BR>[Called By]<UL><LI><a href="#[1be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_read
+<P><STRONG><a name="[1c3]"></a>HAL_ADC_GetState</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f7xx_hal_adc.o(i.HAL_ADC_GetState))
+<BR><BR>[Called By]<UL><LI><a href="#[1c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_read
 </UL>
 
-<P><STRONG><a name="[1c2]"></a>HAL_ADC_GetValue</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f7xx_hal_adc.o(i.HAL_ADC_GetValue))
-<BR><BR>[Called By]<UL><LI><a href="#[1be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_read
+<P><STRONG><a name="[1c4]"></a>HAL_ADC_GetValue</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f7xx_hal_adc.o(i.HAL_ADC_GetValue))
+<BR><BR>[Called By]<UL><LI><a href="#[1c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_read
 </UL>
 
 <P><STRONG><a name="[153]"></a>HAL_ADC_Init</STRONG> (Thumb, 376 bytes, Stack size 16 bytes, stm32f7xx_hal_adc.o(i.HAL_ADC_Init))
@@ -1787,7 +1789,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_MspInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;analogin_init
+<BR>[Called By]<UL><LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;analogin_init
 </UL>
 
 <P><STRONG><a name="[154]"></a>HAL_ADC_MspInit</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f7xx_hal_adc.o(i.HAL_ADC_MspInit))
@@ -1799,13 +1801,13 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_read
+<BR>[Called By]<UL><LI><a href="#[1c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_read
 </UL>
 
-<P><STRONG><a name="[1c0]"></a>HAL_ADC_Start</STRONG> (Thumb, 260 bytes, Stack size 8 bytes, stm32f7xx_hal_adc.o(i.HAL_ADC_Start))
+<P><STRONG><a name="[1c2]"></a>HAL_ADC_Start</STRONG> (Thumb, 260 bytes, Stack size 8 bytes, stm32f7xx_hal_adc.o(i.HAL_ADC_Start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = HAL_ADC_Start
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_read
+<BR>[Called By]<UL><LI><a href="#[1c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_read
 </UL>
 
 <P><STRONG><a name="[17a]"></a>HAL_DMA_Abort_IT</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, stm32f7xx_hal_dma.o(i.HAL_DMA_Abort_IT))
@@ -1813,10 +1815,10 @@ Global Symbols
 <LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_ITError
 </UL>
 
-<P><STRONG><a name="[1d6]"></a>HAL_GPIO_Init</STRONG> (Thumb, 572 bytes, Stack size 40 bytes, stm32f7xx_hal_gpio.o(i.HAL_GPIO_Init))
+<P><STRONG><a name="[1d8]"></a>HAL_GPIO_Init</STRONG> (Thumb, 572 bytes, Stack size 40 bytes, stm32f7xx_hal_gpio.o(i.HAL_GPIO_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = HAL_GPIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pin_function
+<BR>[Called By]<UL><LI><a href="#[1cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pin_function
 </UL>
 
 <P><STRONG><a name="[156]"></a>HAL_GetTick</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f7xx_hal.o(i.HAL_GetTick))
@@ -1833,10 +1835,10 @@ Global Symbols
 <LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_CheckIdleState
 </UL>
 
-<P><STRONG><a name="[1d1]"></a>HAL_I2CEx_ConfigAnalogFilter</STRONG> (Thumb, 100 bytes, Stack size 4 bytes, stm32f7xx_hal_i2c_ex.o(i.HAL_I2CEx_ConfigAnalogFilter))
+<P><STRONG><a name="[1d3]"></a>HAL_I2CEx_ConfigAnalogFilter</STRONG> (Thumb, 100 bytes, Stack size 4 bytes, stm32f7xx_hal_i2c_ex.o(i.HAL_I2CEx_ConfigAnalogFilter))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = HAL_I2CEx_ConfigAnalogFilter
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_frequency
+<BR>[Called By]<UL><LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_frequency
 </UL>
 
 <P><STRONG><a name="[157]"></a>HAL_I2C_AbortCpltCallback</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, i2c_api.o(i.HAL_I2C_AbortCpltCallback))
@@ -1862,15 +1864,15 @@ Global Symbols
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c3_irq
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c2_irq
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c1_irq
-<LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_irq_handler_asynch
+<LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_irq_handler_asynch
 </UL>
 
-<P><STRONG><a name="[1d0]"></a>HAL_I2C_EV_IRQHandler</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32f7xx_hal_i2c.o(i.HAL_I2C_EV_IRQHandler))
+<P><STRONG><a name="[1d2]"></a>HAL_I2C_EV_IRQHandler</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32f7xx_hal_i2c.o(i.HAL_I2C_EV_IRQHandler))
 <BR><BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c4_irq
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c3_irq
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c2_irq
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c1_irq
-<LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_irq_handler_asynch
+<LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_irq_handler_asynch
 </UL>
 
 <P><STRONG><a name="[15b]"></a>HAL_I2C_EnableListen_IT</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, stm32f7xx_hal_i2c.o(i.HAL_I2C_EnableListen_IT))
@@ -1901,7 +1903,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MspInit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_ErrorCallback
-<LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_frequency
+<LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_frequency
 </UL>
 
 <P><STRONG><a name="[162]"></a>HAL_I2C_ListenCpltCallback</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, i2c_api.o(i.HAL_I2C_ListenCpltCallback))
@@ -1934,7 +1936,7 @@ Global Symbols
 <LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WaitOnFlagUntilTimeout
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::I2C::read(int, char*, int, bool)
+<BR>[Called By]<UL><LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::I2C::read(int, char*, int, bool)
 </UL>
 
 <P><STRONG><a name="[164]"></a>HAL_I2C_Master_Sequential_Receive_IT</STRONG> (Thumb, 132 bytes, Stack size 16 bytes, stm32f7xx_hal_i2c.o(i.HAL_I2C_Master_Sequential_Receive_IT))
@@ -1953,7 +1955,7 @@ Global Symbols
 <LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WaitOnFlagUntilTimeout
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::I2C::write(int, const char*, int, bool)
+<BR>[Called By]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::I2C::write(int, const char*, int, bool)
 </UL>
 
 <P><STRONG><a name="[186]"></a>HAL_I2C_MemRxCpltCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f7xx_hal_i2c.o(i.HAL_I2C_MemRxCpltCallback))
@@ -1978,7 +1980,7 @@ Global Symbols
 <LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_ITSlaveCplt
 </UL>
 
-<P><STRONG><a name="[1d8]"></a>HAL_IncTick</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f7xx_hal.o(i.HAL_IncTick))
+<P><STRONG><a name="[1da]"></a>HAL_IncTick</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f7xx_hal.o(i.HAL_IncTick))
 <BR><BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_irq_handler
 </UL>
 
@@ -1990,7 +1992,7 @@ Global Symbols
 <LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriorityGrouping
 </UL>
 <BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
-<LI><a href="#[1ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_sdk_init
+<LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_sdk_init
 </UL>
 
 <P><STRONG><a name="[16c]"></a>HAL_InitTick</STRONG> (Thumb, 170 bytes, Stack size 48 bytes, hal_tick_32b.o(i.HAL_InitTick))
@@ -2099,7 +2101,7 @@ Global Symbols
 <LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Abort_IT
 <LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
 </UL>
-<BR>[Called By]<UL><LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_irq_handler_asynch
+<BR>[Called By]<UL><LI><a href="#[19c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_irq_handler_asynch
 </UL>
 
 <P><STRONG><a name="[17d]"></a>HAL_UART_Init</STRONG> (Thumb, 110 bytes, Stack size 8 bytes, stm32f7xx_hal_uart.o(i.HAL_UART_Init))
@@ -2110,7 +2112,7 @@ Global Symbols
 <LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_CheckIdleState
 <LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_AdvFeatureConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_uart
+<BR>[Called By]<UL><LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_uart
 </UL>
 
 <P><STRONG><a name="[17e]"></a>HAL_UART_MspInit</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f7xx_hal_uart.o(i.HAL_UART_MspInit))
@@ -2160,15 +2162,15 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;error
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pin_function
-<LI><a href="#[1cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init
-<LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pin_mode
+<BR>[Called By]<UL><LI><a href="#[1cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pin_function
+<LI><a href="#[1ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init
+<LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pin_mode
 </UL>
 
-<P><STRONG><a name="[1d5]"></a>SystemCoreClockUpdate</STRONG> (Thumb, 124 bytes, Stack size 8 bytes, system_stm32f7xx.o(i.SystemCoreClockUpdate))
+<P><STRONG><a name="[1d7]"></a>SystemCoreClockUpdate</STRONG> (Thumb, 124 bytes, Stack size 8 bytes, system_stm32f7xx.o(i.SystemCoreClockUpdate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SystemCoreClockUpdate
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_sdk_init
+<BR>[Called By]<UL><LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_sdk_init
 </UL>
 
 <P><STRONG><a name="[87]"></a>SystemInit</STRONG> (Thumb, 264 bytes, Stack size 32 bytes, system_stm32f7xx.o(i.SystemInit))
@@ -2217,20 +2219,54 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_CheckIdleState
 </UL>
 
-<P><STRONG><a name="[193]"></a>reset_zero()</STRONG> (Thumb, 534 bytes, Stack size 32 bytes, main.o(i._Z10reset_zerov))
-<BR><BR>[Stack]<UL><LI>Max Depth = 592 + Unknown Stack Size
-<LI>Call Chain = reset_zero() &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
+<P><STRONG><a name="[193]"></a>hour_click()</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, main.o(i._Z10hour_clickv))
+<BR><BR>[Stack]<UL><LI>Max Depth = 568 + Unknown Stack Size
+ + In Cycle
+<LI>Call Chain = hour_click() &rArr;  wait_clock(double) (Cycle)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
+<LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_clock(double)
+</UL>
+<BR>[Called By]<UL><LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;$Super$$main
+<LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reset_clock()
+<LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_clock(double)
+</UL>
+
+<P><STRONG><a name="[195]"></a>wait_clock(double)</STRONG> (Thumb, 144 bytes, Stack size 16 bytes, main.o(i._Z10wait_clockd))
+<BR><BR>[Stack]<UL><LI>Max Depth = 584 + Unknown Stack Size
+ + In Cycle
+<LI>Call Chain = wait_clock(double) &rArr;  min_click() (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait
-<LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
-<LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;analogin_read
+<LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;min_click()
+<LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hour_click()
+</UL>
+<BR>[Called By]<UL><LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;$Super$$main
+<LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;min_click()
+<LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hour_click()
+</UL>
+
+<P><STRONG><a name="[198]"></a>reset_clock()</STRONG> (Thumb, 230 bytes, Stack size 24 bytes, main.o(i._Z11reset_clockv))
+<BR><BR>[Stack]<UL><LI>Max Depth = 616 + Unknown Stack Size
+<LI>Call Chain = reset_clock() &rArr; min_click() &rArr; wait_clock(double) &rArr;  min_click() (Cycle)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;analogin_read
+<LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;min_click()
+<LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hour_click()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;$Super$$main
 </UL>
 
-<P><STRONG><a name="[197]"></a>min_click()</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, main.o(i._Z9min_clickv), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait
-<LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
+<P><STRONG><a name="[197]"></a>min_click()</STRONG> (Thumb, 84 bytes, Stack size 8 bytes, main.o(i._Z9min_clickv))
+<BR><BR>[Stack]<UL><LI>Max Depth = 592 + Unknown Stack Size
+<LI>Call Chain = min_click() &rArr; wait_clock(double) &rArr;  min_click() (Cycle)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
+<LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_clock(double)
+</UL>
+<BR>[Called By]<UL><LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;$Super$$main
+<LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reset_clock()
+<LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_clock(double)
 </UL>
 
 <P><STRONG><a name="[ac]"></a>mbed::FileHandle::flen()</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, retarget.o(i._ZN4mbed10FileHandle4flenEv))
@@ -2249,22 +2285,22 @@ Global Symbols
 <LI> FileLike.o(.constdata__ZTVN4mbed8FileLikeE)
 <LI> Stream.o(.constdata__ZTVN4mbed6StreamE)
 </UL>
-<P><STRONG><a name="[208]"></a>mbed::FileHandle::~FileHandle()</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, retarget.o(i._ZN4mbed10FileHandleD2Ev), UNUSED)
+<P><STRONG><a name="[20a]"></a>mbed::FileHandle::~FileHandle()</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, retarget.o(i._ZN4mbed10FileHandleD2Ev), UNUSED)
 
 <P><STRONG><a name="[ad]"></a>mbed::FileHandle::~FileHandle__sub_object()</STRONG> (Thumb, 96 bytes, Stack size 16 bytes, retarget.o(i._ZN4mbed10FileHandleD2Ev))
 <BR><BR>[Stack]<UL><LI>Max Depth = 576 + Unknown Stack Size
 <LI>Call Chain = mbed::FileHandle::~FileHandle__sub_object() &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
+<BR>[Calls]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
 </UL>
 <BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileLike::~FileLike__sub_object()
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> retarget.o(.constdata__ZTVN4mbed10FileHandleE)
 </UL>
-<P><STRONG><a name="[198]"></a>mbed::SerialBase::_base_putc(int)</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, SerialBase.o(i._ZN4mbed10SerialBase10_base_putcEi))
+<P><STRONG><a name="[19a]"></a>mbed::SerialBase::_base_putc(int)</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, SerialBase.o(i._ZN4mbed10SerialBase10_base_putcEi))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = mbed::SerialBase::_base_putc(int)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_putc
+<BR>[Calls]<UL><LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_putc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;thunk{-180} to mbed::Serial::_putc(int)
 </UL>
@@ -2273,45 +2309,45 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 568 + Unknown Stack Size
 <LI>Call Chain = mbed::SerialBase::_irq_handler(unsigned, SerialIrq) &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
+<BR>[Calls]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> SerialBase.o(i._ZN4mbed10SerialBaseC1E7PinNameS1_i)
 </UL>
 <P><STRONG><a name="[a5]"></a>mbed::SerialBase::interrupt_handler_asynch()</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, SerialBase.o(i._ZN4mbed10SerialBase24interrupt_handler_asynchEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = mbed::SerialBase::interrupt_handler_asynch() &rArr; serial_irq_handler_asynch &rArr; HAL_UART_IRQHandler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_irq_handler_asynch
+<BR>[Calls]<UL><LI><a href="#[19c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_irq_handler_asynch
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> SerialBase.o(.constdata)
 </UL>
-<P><STRONG><a name="[19b]"></a>mbed::SerialBase::SerialBase(PinName, PinName, int)</STRONG> (Thumb, 310 bytes, Stack size 56 bytes, SerialBase.o(i._ZN4mbed10SerialBaseC1E7PinNameS1_i))
+<P><STRONG><a name="[19d]"></a>mbed::SerialBase::SerialBase(PinName, PinName, int)</STRONG> (Thumb, 310 bytes, Stack size 56 bytes, SerialBase.o(i._ZN4mbed10SerialBaseC1E7PinNameS1_i))
 <BR><BR>[Stack]<UL><LI>Max Depth = 440 + Unknown Stack Size
 <LI>Call Chain = mbed::SerialBase::SerialBase(PinName, PinName, int) &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_irq_handler
-<LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_baud
-<LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_init
-<LI><a href="#[19c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_vec_ctor_nocookie_nodtor
+<BR>[Calls]<UL><LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_irq_handler
+<LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_baud
+<LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_init
+<LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_vec_ctor_nocookie_nodtor
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::Serial::Serial(PinName, PinName, const char*, int)
+<BR>[Called By]<UL><LI><a href="#[1a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::Serial::Serial(PinName, PinName, const char*, int)
 </UL>
 
-<P><STRONG><a name="[209]"></a>mbed::SerialBase::SerialBase__sub_object(PinName, PinName, int)</STRONG> (Thumb, 0 bytes, Stack size 56 bytes, SerialBase.o(i._ZN4mbed10SerialBaseC1E7PinNameS1_i), UNUSED)
+<P><STRONG><a name="[20b]"></a>mbed::SerialBase::SerialBase__sub_object(PinName, PinName, int)</STRONG> (Thumb, 0 bytes, Stack size 56 bytes, SerialBase.o(i._ZN4mbed10SerialBaseC1E7PinNameS1_i), UNUSED)
 
-<P><STRONG><a name="[1a0]"></a>mbed::mbed_set_unbuffered_stream(std::__FILE*)</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, retarget.o(i._ZN4mbed26mbed_set_unbuffered_streamEPSt6__FILE))
+<P><STRONG><a name="[1a2]"></a>mbed::mbed_set_unbuffered_stream(std::__FILE*)</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, retarget.o(i._ZN4mbed26mbed_set_unbuffered_streamEPSt6__FILE))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = mbed::mbed_set_unbuffered_stream(std::__FILE*) &rArr; setbuf &rArr; setvbuf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setbuf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::Stream::Stream__sub_object(const char*)
+<BR>[Called By]<UL><LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::Stream::Stream__sub_object(const char*)
 </UL>
 
 <P><STRONG><a name="[a4]"></a>mbed::I2C::irq_handler_asynch()</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, i2c.o(i._ZN4mbed3I2C18irq_handler_asynchEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 704 + Unknown Stack Size
 <LI>Call Chain = mbed::I2C::irq_handler_asynch() &rArr; i2c_irq_handler_asynch &rArr; HAL_I2C_ER_IRQHandler &rArr; I2C_ITError &rArr; HAL_I2C_ErrorCallback &rArr; i2c_init &rArr; i2c_frequency &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_irq_handler_asynch
+<BR>[Calls]<UL><LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_irq_handler_asynch
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> i2c.o(.constdata)
 </UL>
@@ -2319,73 +2355,73 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 560 + Unknown Stack Size
 <LI>Call Chain = mbed::I2C::lock() &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
+<BR>[Calls]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> i2c.o(.constdata__ZTVN4mbed3I2CE)
 </UL>
-<P><STRONG><a name="[1a2]"></a>mbed::I2C::read(int, char*, int, bool)</STRONG> (Thumb, 106 bytes, Stack size 32 bytes, i2c.o(i._ZN4mbed3I2C4readEiPcib))
+<P><STRONG><a name="[1a4]"></a>mbed::I2C::read(int, char*, int, bool)</STRONG> (Thumb, 106 bytes, Stack size 32 bytes, i2c.o(i._ZN4mbed3I2C4readEiPcib))
 <BR><BR>[Stack]<UL><LI>Max Depth = 608 + Unknown Stack Size
 <LI>Call Chain = mbed::I2C::read(int, char*, int, bool) &rArr; i2c_frequency &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_frequency
+<BR>[Calls]<UL><LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_frequency
 <LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Master_Receive
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sht31::Sht31(PinName, PinName)
+<BR>[Called By]<UL><LI><a href="#[1b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sht31::Sht31(PinName, PinName)
 </UL>
 
-<P><STRONG><a name="[1a4]"></a>mbed::I2C::write(int, const char*, int, bool)</STRONG> (Thumb, 106 bytes, Stack size 32 bytes, i2c.o(i._ZN4mbed3I2C5writeEiPKcib))
+<P><STRONG><a name="[1a6]"></a>mbed::I2C::write(int, const char*, int, bool)</STRONG> (Thumb, 106 bytes, Stack size 32 bytes, i2c.o(i._ZN4mbed3I2C5writeEiPKcib))
 <BR><BR>[Stack]<UL><LI>Max Depth = 608 + Unknown Stack Size
 <LI>Call Chain = mbed::I2C::write(int, const char*, int, bool) &rArr; i2c_frequency &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_frequency
+<BR>[Calls]<UL><LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_frequency
 <LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Master_Transmit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sht31::Sht31(PinName, PinName)
+<BR>[Called By]<UL><LI><a href="#[1b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sht31::Sht31(PinName, PinName)
 </UL>
 
 <P><STRONG><a name="[b1]"></a>mbed::I2C::unlock()</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, i2c.o(i._ZN4mbed3I2C6unlockEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 560 + Unknown Stack Size
 <LI>Call Chain = mbed::I2C::unlock() &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
+<BR>[Calls]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> i2c.o(.constdata__ZTVN4mbed3I2CE)
 </UL>
-<P><STRONG><a name="[1a5]"></a>mbed::I2C::I2C(PinName, PinName)</STRONG> (Thumb, 230 bytes, Stack size 48 bytes, i2c.o(i._ZN4mbed3I2CC1E7PinNameS1_))
+<P><STRONG><a name="[1a7]"></a>mbed::I2C::I2C(PinName, PinName)</STRONG> (Thumb, 230 bytes, Stack size 48 bytes, i2c.o(i._ZN4mbed3I2CC1E7PinNameS1_))
 <BR><BR>[Stack]<UL><LI>Max Depth = 680 + Unknown Stack Size
 <LI>Call Chain = mbed::I2C::I2C(PinName, PinName) &rArr; i2c_init &rArr; i2c_frequency &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_init
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sht31::Sht31(PinName, PinName)
+<BR>[Called By]<UL><LI><a href="#[1b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sht31::Sht31(PinName, PinName)
 </UL>
 
-<P><STRONG><a name="[20a]"></a>mbed::I2C::I2C__sub_object(PinName, PinName)</STRONG> (Thumb, 0 bytes, Stack size 48 bytes, i2c.o(i._ZN4mbed3I2CC1E7PinNameS1_), UNUSED)
+<P><STRONG><a name="[20c]"></a>mbed::I2C::I2C__sub_object(PinName, PinName)</STRONG> (Thumb, 0 bytes, Stack size 48 bytes, i2c.o(i._ZN4mbed3I2CC1E7PinNameS1_), UNUSED)
 
-<P><STRONG><a name="[1a6]"></a>mbed::Serial::Serial(PinName, PinName, const char*, int)</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, Serial.o(i._ZN4mbed6SerialC1E7PinNameS1_PKci))
+<P><STRONG><a name="[1a8]"></a>mbed::Serial::Serial(PinName, PinName, const char*, int)</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, Serial.o(i._ZN4mbed6SerialC1E7PinNameS1_PKci))
 <BR><BR>[Stack]<UL><LI>Max Depth = 712 + Unknown Stack Size
 <LI>Call Chain = mbed::Serial::Serial(PinName, PinName, const char*, int) &rArr; mbed::Stream::Stream__sub_object(const char*) &rArr; fopen &rArr; freopen &rArr; _sys_open &rArr; mbed::FilePath::FilePath(const char*) &rArr; mbed::FileBase::lookup(const char*, unsigned) &rArr; SingletonPtr&lang;PlatformMutex&rang;::operator -&rang;() &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::Stream::Stream__sub_object(const char*)
-<LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::SerialBase::SerialBase(PinName, PinName, int)
+<BR>[Calls]<UL><LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::Stream::Stream__sub_object(const char*)
+<LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::SerialBase::SerialBase(PinName, PinName, int)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sti___8_main_cpp_1d334e7b
 </UL>
 
-<P><STRONG><a name="[20b]"></a>mbed::Serial::Serial__sub_object(PinName, PinName, const char*, int)</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, Serial.o(i._ZN4mbed6SerialC1E7PinNameS1_PKci), UNUSED)
+<P><STRONG><a name="[20d]"></a>mbed::Serial::Serial__sub_object(PinName, PinName, const char*, int)</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, Serial.o(i._ZN4mbed6SerialC1E7PinNameS1_PKci), UNUSED)
 
 <P><STRONG><a name="[a3]"></a>mbed::Serial::~Serial()</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, main.o(i._ZN4mbed6SerialD1Ev))
 <BR><BR>[Stack]<UL><LI>Max Depth = 600 + Unknown Stack Size
 <LI>Call Chain = mbed::Serial::~Serial() &rArr; mbed::Stream::~Stream__sub_object() &rArr; mbed::FileLike::~FileLike__sub_object() &rArr; mbed::FileHandle::~FileHandle__sub_object() &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::Stream::~Stream__sub_object()
-<LI><a href="#[1a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_vec_dtor
+<LI><a href="#[1aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_vec_dtor
 </UL>
 <BR>[Address Reference Count : 2]<UL><LI> main.o(i.__sti___8_main_cpp_1d334e7b)
 <LI> Serial.o(.constdata__ZTVN4mbed6SerialE)
 </UL>
-<P><STRONG><a name="[20c]"></a>mbed::Serial::~Serial__sub_object()</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, main.o(i._ZN4mbed6SerialD1Ev), UNUSED)
+<P><STRONG><a name="[20e]"></a>mbed::Serial::~Serial__sub_object()</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, main.o(i._ZN4mbed6SerialD1Ev), UNUSED)
 
 <P><STRONG><a name="[b6]"></a>mbed::Stream::flen()</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, Stream.o(i._ZN4mbed6Stream4flenEv))
 <BR>[Address Reference Count : 2]<UL><LI> Serial.o(.constdata__ZTVN4mbed6SerialE)
@@ -2409,26 +2445,26 @@ Global Symbols
 <BR>[Address Reference Count : 2]<UL><LI> Serial.o(.constdata__ZTVN4mbed6SerialE)
 <LI> Stream.o(.constdata__ZTVN4mbed6StreamE)
 </UL>
-<P><STRONG><a name="[1a7]"></a>mbed::Stream::Stream__sub_object(const char*)</STRONG> (Thumb, 54 bytes, Stack size 24 bytes, Stream.o(i._ZN4mbed6StreamC2EPKc))
+<P><STRONG><a name="[1a9]"></a>mbed::Stream::Stream__sub_object(const char*)</STRONG> (Thumb, 54 bytes, Stack size 24 bytes, Stream.o(i._ZN4mbed6StreamC2EPKc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 704 + Unknown Stack Size
 <LI>Call Chain = mbed::Stream::Stream__sub_object(const char*) &rArr; fopen &rArr; freopen &rArr; _sys_open &rArr; mbed::FilePath::FilePath(const char*) &rArr; mbed::FileBase::lookup(const char*, unsigned) &rArr; SingletonPtr&lang;PlatformMutex&rang;::operator -&rang;() &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::mbed_set_unbuffered_stream(std::__FILE*)
-<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
-<LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileLike::FileLike__sub_object(const char*)
+<BR>[Calls]<UL><LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::mbed_set_unbuffered_stream(std::__FILE*)
+<LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileLike::FileLike__sub_object(const char*)
 <LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fopen
+<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::Serial::Serial(PinName, PinName, const char*, int)
+<BR>[Called By]<UL><LI><a href="#[1a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::Serial::Serial(PinName, PinName, const char*, int)
 </UL>
 
-<P><STRONG><a name="[20d]"></a>mbed::Stream::~Stream()</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, Stream.o(i._ZN4mbed6StreamD2Ev), UNUSED)
+<P><STRONG><a name="[20f]"></a>mbed::Stream::~Stream()</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, Stream.o(i._ZN4mbed6StreamD2Ev), UNUSED)
 
 <P><STRONG><a name="[ba]"></a>mbed::Stream::~Stream__sub_object()</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, Stream.o(i._ZN4mbed6StreamD2Ev))
 <BR><BR>[Stack]<UL><LI>Max Depth = 592 + Unknown Stack Size
 <LI>Call Chain = mbed::Stream::~Stream__sub_object() &rArr; mbed::FileLike::~FileLike__sub_object() &rArr; mbed::FileHandle::~FileHandle__sub_object() &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileLike::~FileLike__sub_object()
-<LI><a href="#[1aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fclose
+<LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fclose
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::Serial::~Serial()
 </UL>
@@ -2438,7 +2474,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 560 + Unknown Stack Size
 <LI>Call Chain = mbed::AnalogIn::lock() &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
+<BR>[Calls]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.constdata__ZTVN4mbed8AnalogInE)
 </UL>
@@ -2446,7 +2482,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 560 + Unknown Stack Size
 <LI>Call Chain = mbed::AnalogIn::unlock() &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
+<BR>[Calls]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.constdata__ZTVN4mbed8AnalogInE)
 </UL>
@@ -2454,59 +2490,59 @@ Global Symbols
 <BR>[Address Reference Count : 2]<UL><LI> main.o(i.__sti___8_main_cpp_1d334e7b)
 <LI> main.o(.constdata__ZTVN4mbed8AnalogInE)
 </UL>
-<P><STRONG><a name="[20e]"></a>mbed::AnalogIn::~AnalogIn__sub_object()</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, main.o(i._ZN4mbed8AnalogInD1Ev), UNUSED)
+<P><STRONG><a name="[210]"></a>mbed::AnalogIn::~AnalogIn__sub_object()</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, main.o(i._ZN4mbed8AnalogInD1Ev), UNUSED)
 
-<P><STRONG><a name="[1b1]"></a>mbed::FileBase::getPathType()</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, FileBase.o(i._ZN4mbed8FileBase11getPathTypeEv))
-<BR><BR>[Called By]<UL><LI><a href="#[1b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FilePath::isFile()
-<LI><a href="#[1b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FilePath::file()
-<LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FilePath::fileSystem()
+<P><STRONG><a name="[1b3]"></a>mbed::FileBase::getPathType()</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, FileBase.o(i._ZN4mbed8FileBase11getPathTypeEv))
+<BR><BR>[Called By]<UL><LI><a href="#[1b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FilePath::isFile()
+<LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FilePath::file()
+<LI><a href="#[1b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FilePath::fileSystem()
 </UL>
 
-<P><STRONG><a name="[1ab]"></a>mbed::FileBase::lookup(const char*, unsigned)</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, FileBase.o(i._ZN4mbed8FileBase6lookupEPKcj))
+<P><STRONG><a name="[1ad]"></a>mbed::FileBase::lookup(const char*, unsigned)</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, FileBase.o(i._ZN4mbed8FileBase6lookupEPKcj))
 <BR><BR>[Stack]<UL><LI>Max Depth = 584 + Unknown Stack Size
 <LI>Call Chain = mbed::FileBase::lookup(const char*, unsigned) &rArr; SingletonPtr&lang;PlatformMutex&rang;::operator -&rang;() &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
-<LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SingletonPtr&lang;PlatformMutex&rang;::operator -&rang;()
-<LI><a href="#[1ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
-<LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<BR>[Calls]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
+<LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SingletonPtr&lang;PlatformMutex&rang;::operator -&rang;()
+<LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
+<LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FilePath::FilePath(const char*)
+<BR>[Called By]<UL><LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FilePath::FilePath(const char*)
 </UL>
 
-<P><STRONG><a name="[1af]"></a>mbed::FileBase::FileBase(const char*, mbed::PathType)</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, FileBase.o(i._ZN4mbed8FileBaseC1EPKcNS_8PathTypeE))
+<P><STRONG><a name="[1b1]"></a>mbed::FileBase::FileBase(const char*, mbed::PathType)</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, FileBase.o(i._ZN4mbed8FileBaseC1EPKcNS_8PathTypeE))
 <BR><BR>[Stack]<UL><LI>Max Depth = 584 + Unknown Stack Size
 <LI>Call Chain = mbed::FileBase::FileBase(const char*, mbed::PathType) &rArr; SingletonPtr&lang;PlatformMutex&rang;::operator -&rang;() &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SingletonPtr&lang;PlatformMutex&rang;::operator -&rang;()
+<BR>[Calls]<UL><LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SingletonPtr&lang;PlatformMutex&rang;::operator -&rang;()
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileLike::FileLike__sub_object(const char*)
+<BR>[Called By]<UL><LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileLike::FileLike__sub_object(const char*)
 </UL>
 
-<P><STRONG><a name="[20f]"></a>mbed::FileBase::FileBase__sub_object(const char*, mbed::PathType)</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, FileBase.o(i._ZN4mbed8FileBaseC1EPKcNS_8PathTypeE), UNUSED)
+<P><STRONG><a name="[211]"></a>mbed::FileBase::FileBase__sub_object(const char*, mbed::PathType)</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, FileBase.o(i._ZN4mbed8FileBaseC1EPKcNS_8PathTypeE), UNUSED)
 
 <P><STRONG><a name="[bd]"></a>mbed::FileBase::~FileBase()</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, FileBase.o(i._ZN4mbed8FileBaseD1Ev))
 <BR><BR>[Stack]<UL><LI>Max Depth = 576 + Unknown Stack Size
 <LI>Call Chain = mbed::FileBase::~FileBase() &rArr; SingletonPtr&lang;PlatformMutex&rang;::operator -&rang;() &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SingletonPtr&lang;PlatformMutex&rang;::operator -&rang;()
+<BR>[Calls]<UL><LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SingletonPtr&lang;PlatformMutex&rang;::operator -&rang;()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileLike::~FileLike__sub_object()
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> FileBase.o(.constdata__ZTVN4mbed8FileBaseE)
 </UL>
-<P><STRONG><a name="[210]"></a>mbed::FileBase::~FileBase__sub_object()</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, FileBase.o(i._ZN4mbed8FileBaseD1Ev), UNUSED)
+<P><STRONG><a name="[212]"></a>mbed::FileBase::~FileBase__sub_object()</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, FileBase.o(i._ZN4mbed8FileBaseD1Ev), UNUSED)
 
-<P><STRONG><a name="[1a9]"></a>mbed::FileLike::FileLike__sub_object(const char*)</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, FileLike.o(i._ZN4mbed8FileLikeC2EPKc))
+<P><STRONG><a name="[1ab]"></a>mbed::FileLike::FileLike__sub_object(const char*)</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, FileLike.o(i._ZN4mbed8FileLikeC2EPKc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 592 + Unknown Stack Size
 <LI>Call Chain = mbed::FileLike::FileLike__sub_object(const char*) &rArr; mbed::FileBase::FileBase(const char*, mbed::PathType) &rArr; SingletonPtr&lang;PlatformMutex&rang;::operator -&rang;() &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileBase::FileBase(const char*, mbed::PathType)
+<BR>[Calls]<UL><LI><a href="#[1b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileBase::FileBase(const char*, mbed::PathType)
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::Stream::Stream__sub_object(const char*)
+<BR>[Called By]<UL><LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::Stream::Stream__sub_object(const char*)
 </UL>
 
-<P><STRONG><a name="[211]"></a>mbed::FileLike::~FileLike()</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, FileLike.o(i._ZN4mbed8FileLikeD2Ev), UNUSED)
+<P><STRONG><a name="[213]"></a>mbed::FileLike::~FileLike()</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, FileLike.o(i._ZN4mbed8FileLikeD2Ev), UNUSED)
 
 <P><STRONG><a name="[be]"></a>mbed::FileLike::~FileLike__sub_object()</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, FileLike.o(i._ZN4mbed8FileLikeD2Ev))
 <BR><BR>[Stack]<UL><LI>Max Depth = 584 + Unknown Stack Size
@@ -2519,69 +2555,69 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> FileLike.o(.constdata__ZTVN4mbed8FileLikeE)
 </UL>
-<P><STRONG><a name="[1b0]"></a>mbed::FilePath::fileSystem()</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, FilePath.o(i._ZN4mbed8FilePath10fileSystemEv))
+<P><STRONG><a name="[1b2]"></a>mbed::FilePath::fileSystem()</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, FilePath.o(i._ZN4mbed8FilePath10fileSystemEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = mbed::FilePath::fileSystem()
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileBase::getPathType()
+<BR>[Calls]<UL><LI><a href="#[1b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileBase::getPathType()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_open
 </UL>
 
-<P><STRONG><a name="[1b2]"></a>mbed::FilePath::file()</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, FilePath.o(i._ZN4mbed8FilePath4fileEv))
+<P><STRONG><a name="[1b4]"></a>mbed::FilePath::file()</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, FilePath.o(i._ZN4mbed8FilePath4fileEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = mbed::FilePath::file()
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileBase::getPathType()
+<BR>[Calls]<UL><LI><a href="#[1b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileBase::getPathType()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_open
 </UL>
 
-<P><STRONG><a name="[1bc]"></a>mbed::FilePath::exists()</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, FilePath.o(i._ZN4mbed8FilePath6existsEv))
+<P><STRONG><a name="[1be]"></a>mbed::FilePath::exists()</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, FilePath.o(i._ZN4mbed8FilePath6existsEv))
 <BR><BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_open
 </UL>
 
-<P><STRONG><a name="[1b3]"></a>mbed::FilePath::isFile()</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, FilePath.o(i._ZN4mbed8FilePath6isFileEv))
+<P><STRONG><a name="[1b5]"></a>mbed::FilePath::isFile()</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, FilePath.o(i._ZN4mbed8FilePath6isFileEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = mbed::FilePath::isFile()
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileBase::getPathType()
+<BR>[Calls]<UL><LI><a href="#[1b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileBase::getPathType()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_open
 </UL>
 
-<P><STRONG><a name="[1bd]"></a>mbed::FilePath::fileName()</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, FilePath.o(i._ZN4mbed8FilePath8fileNameEv))
+<P><STRONG><a name="[1bf]"></a>mbed::FilePath::fileName()</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, FilePath.o(i._ZN4mbed8FilePath8fileNameEv))
 <BR><BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_open
 </UL>
 
-<P><STRONG><a name="[1b4]"></a>mbed::FilePath::FilePath(const char*)</STRONG> (Thumb, 64 bytes, Stack size 8 bytes, FilePath.o(i._ZN4mbed8FilePathC1EPKc))
+<P><STRONG><a name="[1b6]"></a>mbed::FilePath::FilePath(const char*)</STRONG> (Thumb, 64 bytes, Stack size 8 bytes, FilePath.o(i._ZN4mbed8FilePathC1EPKc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 592 + Unknown Stack Size
 <LI>Call Chain = mbed::FilePath::FilePath(const char*) &rArr; mbed::FileBase::lookup(const char*, unsigned) &rArr; SingletonPtr&lang;PlatformMutex&rang;::operator -&rang;() &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileBase::lookup(const char*, unsigned)
+<BR>[Calls]<UL><LI><a href="#[1ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileBase::lookup(const char*, unsigned)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_open
 </UL>
 
-<P><STRONG><a name="[212]"></a>mbed::FilePath::FilePath__sub_object(const char*)</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, FilePath.o(i._ZN4mbed8FilePathC1EPKc), UNUSED)
+<P><STRONG><a name="[214]"></a>mbed::FilePath::FilePath__sub_object(const char*)</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, FilePath.o(i._ZN4mbed8FilePathC1EPKc), UNUSED)
 
-<P><STRONG><a name="[1b5]"></a>Sht31::Sht31(PinName, PinName)</STRONG> (Thumb, 118 bytes, Stack size 24 bytes, sht31.o(i._ZN5Sht31C1E7PinNameS0_))
+<P><STRONG><a name="[1b7]"></a>Sht31::Sht31(PinName, PinName)</STRONG> (Thumb, 118 bytes, Stack size 24 bytes, sht31.o(i._ZN5Sht31C1E7PinNameS0_))
 <BR><BR>[Stack]<UL><LI>Max Depth = 704 + Unknown Stack Size
 <LI>Call Chain = Sht31::Sht31(PinName, PinName) &rArr; mbed::I2C::I2C(PinName, PinName) &rArr; i2c_init &rArr; i2c_frequency &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_ms
-<LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::I2C::I2C(PinName, PinName)
-<LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::I2C::write(int, const char*, int, bool)
-<LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::I2C::read(int, char*, int, bool)
+<BR>[Calls]<UL><LI><a href="#[1b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_ms
+<LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::I2C::I2C(PinName, PinName)
+<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::I2C::write(int, const char*, int, bool)
+<LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::I2C::read(int, char*, int, bool)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sti___8_main_cpp_1d334e7b
 </UL>
 
-<P><STRONG><a name="[213]"></a>Sht31::Sht31__sub_object(PinName, PinName)</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, sht31.o(i._ZN5Sht31C1E7PinNameS0_), UNUSED)
+<P><STRONG><a name="[215]"></a>Sht31::Sht31__sub_object(PinName, PinName)</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, sht31.o(i._ZN5Sht31C1E7PinNameS0_), UNUSED)
 
 <P><STRONG><a name="[a2]"></a>Sht31::~Sht31()</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, main.o(i._ZN5Sht31D1Ev))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Sht31::~Sht31()
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(i.__sti___8_main_cpp_1d334e7b)
 </UL>
-<P><STRONG><a name="[214]"></a>Sht31::~Sht31__sub_object()</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, main.o(i._ZN5Sht31D1Ev), UNUSED)
+<P><STRONG><a name="[216]"></a>Sht31::~Sht31__sub_object()</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, main.o(i._ZN5Sht31D1Ev), UNUSED)
 
 <P><STRONG><a name="[b7]"></a>thunk{-180} to mbed::Serial::lock()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, Serial.o(i._ZThn180_N4mbed6Serial4lockEv))
 <BR>[Address Reference Count : 1]<UL><LI> Serial.o(.constdata__ZTVN4mbed6SerialE)
@@ -2589,7 +2625,7 @@ Global Symbols
 <P><STRONG><a name="[b9]"></a>thunk{-180} to mbed::Serial::_putc(int)</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, Serial.o(i._ZThn180_N4mbed6Serial5_putcEi))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = thunk{-180} to mbed::Serial::_putc(int) &rArr; mbed::SerialBase::_base_putc(int)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::SerialBase::_base_putc(int)
+<BR>[Calls]<UL><LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::SerialBase::_base_putc(int)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> Serial.o(.constdata__ZTVN4mbed6SerialE)
 </UL>
@@ -2603,14 +2639,14 @@ Global Symbols
 <LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_dec_real
 </UL>
 
-<P><STRONG><a name="[1b8]"></a>__aeabi_atexit</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, retarget.o(i.__aeabi_atexit))
+<P><STRONG><a name="[1ba]"></a>__aeabi_atexit</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, retarget.o(i.__aeabi_atexit))
 <BR><BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sti___8_main_cpp_1d334e7b
 </UL>
 
-<P><STRONG><a name="[19c]"></a>__aeabi_vec_ctor_nocookie_nodtor</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, aeabi_vec_ctor_nocookie_nodtor.o(i.__aeabi_vec_ctor_nocookie_nodtor))
+<P><STRONG><a name="[19e]"></a>__aeabi_vec_ctor_nocookie_nodtor</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, aeabi_vec_ctor_nocookie_nodtor.o(i.__aeabi_vec_ctor_nocookie_nodtor))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __aeabi_vec_ctor_nocookie_nodtor
 </UL>
-<BR>[Called By]<UL><LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::SerialBase::SerialBase(PinName, PinName, int)
+<BR>[Called By]<UL><LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::SerialBase::SerialBase(PinName, PinName, int)
 </UL>
 
 <P><STRONG><a name="[ab]"></a>__cxa_pure_virtual</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, pure_virt.o(i.__cxa_pure_virtual))
@@ -2633,7 +2669,7 @@ Global Symbols
 <P><STRONG><a name="[fa]"></a>_platform_post_stackheap_init</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, retarget.o(i._platform_post_stackheap_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = _platform_post_stackheap_init &rArr; mbed_sdk_init &rArr; HAL_Init &rArr; HAL_InitTick &rArr; NVIC_SetVector &rArr; __aeabi_memcpy4
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_sdk_init
+<BR>[Calls]<UL><LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_sdk_init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_postsh_1
 </UL>
@@ -2654,16 +2690,16 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 632 + Unknown Stack Size
 <LI>Call Chain = _sys_open &rArr; mbed::FilePath::FilePath(const char*) &rArr; mbed::FileBase::lookup(const char*, unsigned) &rArr; SingletonPtr&lang;PlatformMutex&rang;::operator -&rang;() &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_baud
-<LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FilePath::FilePath(const char*)
-<LI><a href="#[1bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FilePath::fileName()
-<LI><a href="#[1b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FilePath::isFile()
-<LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FilePath::exists()
-<LI><a href="#[1b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FilePath::file()
-<LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FilePath::fileSystem()
-<LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_init
-<LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
-<LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
+<BR>[Calls]<UL><LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_baud
+<LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FilePath::FilePath(const char*)
+<LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FilePath::fileName()
+<LI><a href="#[1b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FilePath::isFile()
+<LI><a href="#[1be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FilePath::exists()
+<LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FilePath::file()
+<LI><a href="#[1b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FilePath::fileSystem()
+<LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_init
+<LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
+<LI><a href="#[1bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 <LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0sscanf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;freopen
@@ -2677,56 +2713,56 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 16 + In Cycle
 <LI>Call Chain = _sys_write &rArr;  serial_init (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_baud
-<LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_putc
-<LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_init
+<BR>[Calls]<UL><LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_baud
+<LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_putc
+<LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_writebuf
 </UL>
 
-<P><STRONG><a name="[1b7]"></a>analogin_init</STRONG> (Thumb, 264 bytes, Stack size 24 bytes, analogin_api.o(i.analogin_init))
+<P><STRONG><a name="[1b9]"></a>analogin_init</STRONG> (Thumb, 264 bytes, Stack size 24 bytes, analogin_api.o(i.analogin_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 584 + Unknown Stack Size
 <LI>Call Chain = analogin_init &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
-<LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_pinout
-<LI><a href="#[1c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_peripheral
-<LI><a href="#[1c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_function
+<BR>[Calls]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
+<LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_pinout
+<LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_peripheral
+<LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_function
 <LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;error
 <LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sti___8_main_cpp_1d334e7b
 </UL>
 
-<P><STRONG><a name="[194]"></a>analogin_read</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, analogin_api.o(i.analogin_read))
+<P><STRONG><a name="[199]"></a>analogin_read</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, analogin_api.o(i.analogin_read))
 <BR><BR>[Stack]<UL><LI>Max Depth = 320 + Unknown Stack Size
 <LI>Call Chain = analogin_read &rArr; adc_read &rArr; error &rArr; mbed_error_vfprintf &rArr;  serial_init (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_read
+<BR>[Calls]<UL><LI><a href="#[1c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_read
 </UL>
-<BR>[Called By]<UL><LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reset_zero()
+<BR>[Called By]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reset_clock()
 </UL>
 
-<P><STRONG><a name="[1c6]"></a>core_util_critical_section_enter</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, mbed_critical.o(i.core_util_critical_section_enter))
+<P><STRONG><a name="[1c8]"></a>core_util_critical_section_enter</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, mbed_critical.o(i.core_util_critical_section_enter))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16 + In Cycle
 <LI>Call Chain = core_util_critical_section_enter &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
+<BR>[Calls]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_die
-<LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_error_vfprintf
-<LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_error_printf
-<LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
+<BR>[Called By]<UL><LI><a href="#[1cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_die
+<LI><a href="#[1ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_error_vfprintf
+<LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_error_printf
+<LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
 </UL>
 
-<P><STRONG><a name="[1c7]"></a>core_util_critical_section_exit</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, mbed_critical.o(i.core_util_critical_section_exit))
+<P><STRONG><a name="[1c9]"></a>core_util_critical_section_exit</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, mbed_critical.o(i.core_util_critical_section_exit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + In Cycle
 <LI>Call Chain = core_util_critical_section_exit &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
+<BR>[Calls]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_error_vfprintf
-<LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_error_printf
+<BR>[Called By]<UL><LI><a href="#[1ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_error_vfprintf
+<LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_error_printf
 </UL>
 
 <P><STRONG><a name="[18f]"></a>error</STRONG> (Thumb, 18 bytes, Stack size 24 bytes, mbed_error.o(i.error))
@@ -2734,77 +2770,77 @@ Global Symbols
 <LI>Call Chain = error &rArr; mbed_error_vfprintf &rArr;  serial_init (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
-<LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_error_vfprintf
+<LI><a href="#[1ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_error_vfprintf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_uart
-<LI><a href="#[1b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;analogin_init
+<BR>[Called By]<UL><LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_uart
+<LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;analogin_init
 <LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_GPIO_Clock
-<LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_merge
-<LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_pinout
-<LI><a href="#[1c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_peripheral
-<LI><a href="#[1c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_function
-<LI><a href="#[1be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_read
+<LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_merge
+<LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_pinout
+<LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_peripheral
+<LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_function
+<LI><a href="#[1c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_read
 </UL>
 
 <P><STRONG><a name="[ff]"></a>exit</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, retarget.o(i.exit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = exit &rArr; mbed_die &rArr; wait_ms &rArr; us_ticker_read &rArr; HAL_InitTick &rArr; NVIC_SetVector &rArr; __aeabi_memcpy4
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_die
+<BR>[Calls]<UL><LI><a href="#[1cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_die
 <LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fflush
 </UL>
 <BR>[Called By]<UL><LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;error
 <LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[1ca]"></a>gpio_dir</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, gpio_api.o(i.gpio_dir))
+<P><STRONG><a name="[1cc]"></a>gpio_dir</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, gpio_api.o(i.gpio_dir))
 <BR><BR>[Stack]<UL><LI>Max Depth = 576 + Unknown Stack Size
 <LI>Call Chain = gpio_dir &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
-<LI><a href="#[1cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pin_function
+<BR>[Calls]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
+<LI><a href="#[1cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pin_function
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init_out
-<LI><a href="#[1ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init_out_ex
+<BR>[Called By]<UL><LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init_out
+<LI><a href="#[1d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init_out_ex
 </UL>
 
-<P><STRONG><a name="[1cc]"></a>gpio_init</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, gpio_api.o(i.gpio_init))
+<P><STRONG><a name="[1ce]"></a>gpio_init</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, gpio_api.o(i.gpio_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 360 + Unknown Stack Size
 <LI>Call Chain = gpio_init &rArr; pin_function &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pin_function
+<BR>[Calls]<UL><LI><a href="#[1cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pin_function
 <LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_GPIO_Clock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init_out
-<LI><a href="#[1ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init_out_ex
+<BR>[Called By]<UL><LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init_out
+<LI><a href="#[1d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init_out_ex
 </UL>
 
-<P><STRONG><a name="[1b9]"></a>gpio_init_out</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, mbed_gpio.o(i.gpio_init_out))
+<P><STRONG><a name="[1bb]"></a>gpio_init_out</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, mbed_gpio.o(i.gpio_init_out))
 <BR><BR>[Stack]<UL><LI>Max Depth = 592 + Unknown Stack Size
 <LI>Call Chain = gpio_init_out &rArr; gpio_dir &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
-<LI><a href="#[1cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_mode
-<LI><a href="#[1cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init
-<LI><a href="#[1ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_dir
+<BR>[Calls]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
+<LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_mode
+<LI><a href="#[1ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init
+<LI><a href="#[1cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_dir
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sti___8_main_cpp_1d334e7b
 </UL>
 
-<P><STRONG><a name="[1ce]"></a>gpio_init_out_ex</STRONG> (Thumb, 84 bytes, Stack size 24 bytes, mbed_gpio.o(i.gpio_init_out_ex), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
-<LI><a href="#[1cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_mode
-<LI><a href="#[1cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init
-<LI><a href="#[1ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_dir
+<P><STRONG><a name="[1d0]"></a>gpio_init_out_ex</STRONG> (Thumb, 84 bytes, Stack size 24 bytes, mbed_gpio.o(i.gpio_init_out_ex), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
+<LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_mode
+<LI><a href="#[1ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init
+<LI><a href="#[1cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_dir
 </UL>
 
-<P><STRONG><a name="[1cd]"></a>gpio_mode</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, gpio_api.o(i.gpio_mode))
+<P><STRONG><a name="[1cf]"></a>gpio_mode</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, gpio_api.o(i.gpio_mode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 320 + Unknown Stack Size
 <LI>Call Chain = gpio_mode &rArr; pin_mode &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pin_mode
+<BR>[Calls]<UL><LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pin_mode
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init_out
-<LI><a href="#[1ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init_out_ex
+<BR>[Called By]<UL><LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init_out
+<LI><a href="#[1d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init_out_ex
 </UL>
 
 <P><STRONG><a name="[160]"></a>i2c_ev_err_enable</STRONG> (Thumb, 146 bytes, Stack size 24 bytes, i2c_api.o(i.i2c_ev_err_enable))
@@ -2815,118 +2851,121 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_ErrorCallback
 </UL>
 
-<P><STRONG><a name="[1a3]"></a>i2c_frequency</STRONG> (Thumb, 242 bytes, Stack size 16 bytes, i2c_api.o(i.i2c_frequency))
+<P><STRONG><a name="[1a5]"></a>i2c_frequency</STRONG> (Thumb, 242 bytes, Stack size 16 bytes, i2c_api.o(i.i2c_frequency))
 <BR><BR>[Stack]<UL><LI>Max Depth = 576 + Unknown Stack Size
 <LI>Call Chain = i2c_frequency &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Init
-<LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2CEx_ConfigAnalogFilter
-<LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
+<LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2CEx_ConfigAnalogFilter
+<LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
 </UL>
 <BR>[Called By]<UL><LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_init
-<LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::I2C::write(int, const char*, int, bool)
-<LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::I2C::read(int, char*, int, bool)
+<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::I2C::write(int, const char*, int, bool)
+<LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::I2C::read(int, char*, int, bool)
 </UL>
 
 <P><STRONG><a name="[15e]"></a>i2c_init</STRONG> (Thumb, 544 bytes, Stack size 56 bytes, i2c_api.o(i.i2c_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 632 + Unknown Stack Size
 <LI>Call Chain = i2c_init &rArr; i2c_frequency &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
-<LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_merge
-<LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pin_mode
-<LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_pinout
-<LI><a href="#[1c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_peripheral
-<LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_frequency
+<BR>[Calls]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
+<LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_merge
+<LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pin_mode
+<LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_pinout
+<LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_peripheral
+<LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_frequency
 </UL>
 <BR>[Called By]<UL><LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_ErrorCallback
-<LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::I2C::I2C(PinName, PinName)
+<LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::I2C::I2C(PinName, PinName)
 </UL>
 
-<P><STRONG><a name="[1a1]"></a>i2c_irq_handler_asynch</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, i2c_api.o(i.i2c_irq_handler_asynch))
+<P><STRONG><a name="[1a3]"></a>i2c_irq_handler_asynch</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, i2c_api.o(i.i2c_irq_handler_asynch))
 <BR><BR>[Stack]<UL><LI>Max Depth = 696 + Unknown Stack Size
 <LI>Call Chain = i2c_irq_handler_asynch &rArr; HAL_I2C_ER_IRQHandler &rArr; I2C_ITError &rArr; HAL_I2C_ErrorCallback &rArr; i2c_init &rArr; i2c_frequency &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_EV_IRQHandler
+<BR>[Calls]<UL><LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_EV_IRQHandler
 <LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_ER_IRQHandler
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::I2C::irq_handler_asynch()
 </UL>
 
-<P><STRONG><a name="[151]"></a>$Super$$main</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, main.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 600 + Unknown Stack Size
-<LI>Call Chain = $Super$$main &rArr; reset_zero() &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
+<P><STRONG><a name="[151]"></a>$Super$$main</STRONG> (Thumb, 90 bytes, Stack size 8 bytes, main.o(i.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 624 + Unknown Stack Size
+<LI>Call Chain = $Super$$main &rArr; reset_clock() &rArr; min_click() &rArr; wait_clock(double) &rArr;  min_click() (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reset_zero()
+<BR>[Calls]<UL><LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;min_click()
+<LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reset_clock()
+<LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_clock(double)
+<LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hour_click()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[195]"></a>mbed_assert_internal</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, mbed_assert.o(i.mbed_assert_internal))
+<P><STRONG><a name="[194]"></a>mbed_assert_internal</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, mbed_assert.o(i.mbed_assert_internal))
 <BR><BR>[Stack]<UL><LI>Max Depth = 560 + Unknown Stack Size
 <LI>Call Chain = mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_die
-<LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_util_critical_section_enter
-<LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_error_printf
+<BR>[Calls]<UL><LI><a href="#[1cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_die
+<LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_util_critical_section_enter
+<LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_error_printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_open
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileHandle::~FileHandle__sub_object()
-<LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_init
-<LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_util_critical_section_exit
-<LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_util_critical_section_enter
+<LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_init
+<LI><a href="#[1c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_util_critical_section_exit
+<LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_util_critical_section_enter
 <LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::AnalogIn::unlock()
 <LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::AnalogIn::lock()
-<LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init_out
-<LI><a href="#[1b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;analogin_init
+<LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init_out
+<LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;analogin_init
 <LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;min_click()
-<LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reset_zero()
+<LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hour_click()
 <LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sti___8_main_cpp_1d334e7b
-<LI><a href="#[1cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pin_function
-<LI><a href="#[1ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_dir
-<LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pin_mode
+<LI><a href="#[1cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pin_function
+<LI><a href="#[1cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_dir
+<LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pin_mode
 <LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_init
-<LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_frequency
+<LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_frequency
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::I2C::unlock()
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::I2C::lock()
-<LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SingletonPtr&lang;PlatformMutex&rang;::operator -&rang;()
-<LI><a href="#[1ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init_out_ex
+<LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SingletonPtr&lang;PlatformMutex&rang;::operator -&rang;()
+<LI><a href="#[1d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init_out_ex
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::SerialBase::_irq_handler(unsigned, SerialIrq)
-<LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileBase::lookup(const char*, unsigned)
+<LI><a href="#[1ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileBase::lookup(const char*, unsigned)
 </UL>
 
-<P><STRONG><a name="[1c9]"></a>mbed_die</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, mbed_board.o(i.mbed_die))
+<P><STRONG><a name="[1cb]"></a>mbed_die</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, mbed_board.o(i.mbed_die))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = mbed_die &rArr; wait_ms &rArr; us_ticker_read &rArr; HAL_InitTick &rArr; NVIC_SetVector &rArr; __aeabi_memcpy4
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_util_critical_section_enter
-<LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_ms
+<BR>[Calls]<UL><LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_util_critical_section_enter
+<LI><a href="#[1b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_ms
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
-<LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
+<LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
 </UL>
 
-<P><STRONG><a name="[1d4]"></a>mbed_error_printf</STRONG> (Thumb, 74 bytes, Stack size 160 bytes, mbed_board.o(i.mbed_error_printf))
+<P><STRONG><a name="[1d6]"></a>mbed_error_printf</STRONG> (Thumb, 74 bytes, Stack size 160 bytes, mbed_board.o(i.mbed_error_printf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 544 + Unknown Stack Size
 <LI>Call Chain = mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_putc
-<LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_init
-<LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_util_critical_section_exit
-<LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_util_critical_section_enter
+<BR>[Calls]<UL><LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_putc
+<LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_init
+<LI><a href="#[1c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_util_critical_section_exit
+<LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_util_critical_section_enter
 <LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vsprintf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
+<BR>[Called By]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
 </UL>
 
-<P><STRONG><a name="[1c8]"></a>mbed_error_vfprintf</STRONG> (Thumb, 68 bytes, Stack size 144 bytes, mbed_board.o(i.mbed_error_vfprintf))
+<P><STRONG><a name="[1ca]"></a>mbed_error_vfprintf</STRONG> (Thumb, 68 bytes, Stack size 144 bytes, mbed_board.o(i.mbed_error_vfprintf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 264 + Unknown Stack Size
  + In Cycle
 <LI>Call Chain = mbed_error_vfprintf &rArr;  serial_init (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_putc
-<LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_init
-<LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_util_critical_section_exit
-<LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_util_critical_section_enter
+<BR>[Calls]<UL><LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_putc
+<LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_init
+<LI><a href="#[1c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_util_critical_section_exit
+<LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;core_util_critical_section_enter
 <LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vsprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;error
@@ -2936,119 +2975,119 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[1ba]"></a>mbed_sdk_init</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, mbed_overrides.o(i.mbed_sdk_init))
+<P><STRONG><a name="[1bc]"></a>mbed_sdk_init</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, mbed_overrides.o(i.mbed_sdk_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = mbed_sdk_init &rArr; HAL_Init &rArr; HAL_InitTick &rArr; NVIC_SetVector &rArr; __aeabi_memcpy4
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockUpdate
+<BR>[Calls]<UL><LI><a href="#[1d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockUpdate
 <LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_platform_post_stackheap_init
 </UL>
 
-<P><STRONG><a name="[1cb]"></a>pin_function</STRONG> (Thumb, 80 bytes, Stack size 40 bytes, pinmap.o(i.pin_function))
+<P><STRONG><a name="[1cd]"></a>pin_function</STRONG> (Thumb, 80 bytes, Stack size 40 bytes, pinmap.o(i.pin_function))
 <BR><BR>[Stack]<UL><LI>Max Depth = 344 + Unknown Stack Size
  + In Cycle
 <LI>Call Chain = pin_function &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
-<LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
+<BR>[Calls]<UL><LI><a href="#[1d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
+<LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
 <LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_GPIO_Clock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init
-<LI><a href="#[1ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_dir
-<LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_pinout
+<BR>[Called By]<UL><LI><a href="#[1ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init
+<LI><a href="#[1cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_dir
+<LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_pinout
 </UL>
 
-<P><STRONG><a name="[1cf]"></a>pin_mode</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, pinmap.o(i.pin_mode))
+<P><STRONG><a name="[1d1]"></a>pin_mode</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, pinmap.o(i.pin_mode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 320 + Unknown Stack Size
  + In Cycle
 <LI>Call Chain = pin_mode &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
+<BR>[Calls]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
 <LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Set_GPIO_Clock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_init
-<LI><a href="#[1cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_mode
-<LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_pinout
+<BR>[Called By]<UL><LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_init
+<LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_mode
+<LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_pinout
 <LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_init
 </UL>
 
-<P><STRONG><a name="[1c4]"></a>pinmap_function</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, mbed_pinmap_common.o(i.pinmap_function))
+<P><STRONG><a name="[1c6]"></a>pinmap_function</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, mbed_pinmap_common.o(i.pinmap_function))
 <BR><BR>[Stack]<UL><LI>Max Depth = 296 + Unknown Stack Size
 <LI>Call Chain = pinmap_function &rArr; error &rArr; mbed_error_vfprintf &rArr;  serial_init (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;error
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;analogin_init
+<BR>[Called By]<UL><LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;analogin_init
 </UL>
 
-<P><STRONG><a name="[1d2]"></a>pinmap_merge</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, mbed_pinmap_common.o(i.pinmap_merge))
+<P><STRONG><a name="[1d4]"></a>pinmap_merge</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, mbed_pinmap_common.o(i.pinmap_merge))
 <BR><BR>[Stack]<UL><LI>Max Depth = 296 + Unknown Stack Size
 <LI>Call Chain = pinmap_merge &rArr; error &rArr; mbed_error_vfprintf &rArr;  serial_init (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;error
 </UL>
-<BR>[Called By]<UL><LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_init
+<BR>[Called By]<UL><LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_init
 <LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_init
 </UL>
 
-<P><STRONG><a name="[1c3]"></a>pinmap_peripheral</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, mbed_pinmap_common.o(i.pinmap_peripheral))
+<P><STRONG><a name="[1c5]"></a>pinmap_peripheral</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, mbed_pinmap_common.o(i.pinmap_peripheral))
 <BR><BR>[Stack]<UL><LI>Max Depth = 296 + Unknown Stack Size
 <LI>Call Chain = pinmap_peripheral &rArr; error &rArr; mbed_error_vfprintf &rArr;  serial_init (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;error
 </UL>
-<BR>[Called By]<UL><LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_init
-<LI><a href="#[1b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;analogin_init
+<BR>[Called By]<UL><LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_init
+<LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;analogin_init
 <LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_init
 </UL>
 
-<P><STRONG><a name="[1c5]"></a>pinmap_pinout</STRONG> (Thumb, 72 bytes, Stack size 8 bytes, mbed_pinmap_common.o(i.pinmap_pinout))
+<P><STRONG><a name="[1c7]"></a>pinmap_pinout</STRONG> (Thumb, 72 bytes, Stack size 8 bytes, mbed_pinmap_common.o(i.pinmap_pinout))
 <BR><BR>[Stack]<UL><LI>Max Depth = 352 + Unknown Stack Size
 <LI>Call Chain = pinmap_pinout &rArr; pin_function &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pin_function
-<LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pin_mode
+<BR>[Calls]<UL><LI><a href="#[1cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pin_function
+<LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pin_mode
 <LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;error
 </UL>
-<BR>[Called By]<UL><LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_init
-<LI><a href="#[1b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;analogin_init
+<BR>[Called By]<UL><LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_init
+<LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;analogin_init
 <LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;i2c_init
 </UL>
 
-<P><STRONG><a name="[19e]"></a>serial_baud</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, serial_api.o(i.serial_baud))
-<BR><BR>[Calls]<UL><LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_uart
+<P><STRONG><a name="[1a0]"></a>serial_baud</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, serial_api.o(i.serial_baud))
+<BR><BR>[Calls]<UL><LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_uart
 </UL>
 <BR>[Called By]<UL><LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_write
 <LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_open
-<LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::SerialBase::SerialBase(PinName, PinName, int)
+<LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::SerialBase::SerialBase(PinName, PinName, int)
 </UL>
 
-<P><STRONG><a name="[19d]"></a>serial_init</STRONG> (Thumb, 524 bytes, Stack size 32 bytes, serial_api.o(i.serial_init))
+<P><STRONG><a name="[19f]"></a>serial_init</STRONG> (Thumb, 524 bytes, Stack size 32 bytes, serial_api.o(i.serial_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 384 + Unknown Stack Size
  + In Cycle
 <LI>Call Chain = serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_uart
-<LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
-<LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_merge
-<LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pin_mode
-<LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_pinout
-<LI><a href="#[1c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_peripheral
+<BR>[Calls]<UL><LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_uart
+<LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
+<LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_merge
+<LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pin_mode
+<LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_pinout
+<LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pinmap_peripheral
 <LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_write
 <LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_open
-<LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_error_vfprintf
-<LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_error_printf
-<LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::SerialBase::SerialBase(PinName, PinName, int)
+<LI><a href="#[1ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_error_vfprintf
+<LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_error_printf
+<LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::SerialBase::SerialBase(PinName, PinName, int)
 </UL>
 
-<P><STRONG><a name="[19f]"></a>serial_irq_handler</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, serial_api.o(i.serial_irq_handler))
-<BR><BR>[Called By]<UL><LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::SerialBase::SerialBase(PinName, PinName, int)
+<P><STRONG><a name="[1a1]"></a>serial_irq_handler</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, serial_api.o(i.serial_irq_handler))
+<BR><BR>[Called By]<UL><LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::SerialBase::SerialBase(PinName, PinName, int)
 </UL>
 
-<P><STRONG><a name="[19a]"></a>serial_irq_handler_asynch</STRONG> (Thumb, 372 bytes, Stack size 40 bytes, serial_api.o(i.serial_irq_handler_asynch))
+<P><STRONG><a name="[19c]"></a>serial_irq_handler_asynch</STRONG> (Thumb, 372 bytes, Stack size 40 bytes, serial_api.o(i.serial_irq_handler_asynch))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = serial_irq_handler_asynch &rArr; HAL_UART_IRQHandler
 </UL>
 <BR>[Calls]<UL><LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_IRQHandler
@@ -3056,24 +3095,24 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::SerialBase::interrupt_handler_asynch()
 </UL>
 
-<P><STRONG><a name="[199]"></a>serial_putc</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, serial_api.o(i.serial_putc))
+<P><STRONG><a name="[19b]"></a>serial_putc</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, serial_api.o(i.serial_putc))
 <BR><BR>[Called By]<UL><LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_write
-<LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_error_vfprintf
-<LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_error_printf
-<LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::SerialBase::_base_putc(int)
+<LI><a href="#[1ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_error_vfprintf
+<LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_error_printf
+<LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::SerialBase::_base_putc(int)
 </UL>
 
-<P><STRONG><a name="[1d9]"></a>ticker_irq_handler</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, mbed_ticker_api.o(i.ticker_irq_handler))
+<P><STRONG><a name="[1db]"></a>ticker_irq_handler</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, mbed_ticker_api.o(i.ticker_irq_handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = ticker_irq_handler
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;us_ticker_irq_handler
+<BR>[Called By]<UL><LI><a href="#[1d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;us_ticker_irq_handler
 </UL>
 
 <P><STRONG><a name="[96]"></a>timer_irq_handler</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, hal_tick_32b.o(i.timer_irq_handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = timer_irq_handler &rArr; us_ticker_irq_handler &rArr; ticker_irq_handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;us_ticker_irq_handler
-<LI><a href="#[1d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_IncTick
+<BR>[Calls]<UL><LI><a href="#[1d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;us_ticker_irq_handler
+<LI><a href="#[1da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_IncTick
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> hal_tick_32b.o(i.HAL_InitTick)
 </UL>
@@ -3090,10 +3129,10 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> mbed_us_ticker_api.o(.constdata)
 </UL>
-<P><STRONG><a name="[1d7]"></a>us_ticker_irq_handler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, mbed_us_ticker_api.o(i.us_ticker_irq_handler))
+<P><STRONG><a name="[1d9]"></a>us_ticker_irq_handler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, mbed_us_ticker_api.o(i.us_ticker_irq_handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = us_ticker_irq_handler &rArr; ticker_irq_handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ticker_irq_handler
+<BR>[Calls]<UL><LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ticker_irq_handler
 </UL>
 <BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_irq_handler
 </UL>
@@ -3104,7 +3143,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
 </UL>
 <BR>[Called By]<UL><LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait
-<LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_ms
+<LI><a href="#[1b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_ms
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> mbed_us_ticker_api.o(.constdata)
 </UL>
@@ -3116,23 +3155,22 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;us_ticker_read
 </UL>
-<BR>[Called By]<UL><LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;min_click()
-<LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reset_zero()
+<BR>[Called By]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_clock(double)
 </UL>
 
-<P><STRONG><a name="[1b6]"></a>wait_ms</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, mbed_wait_api_no_rtos.o(i.wait_ms))
+<P><STRONG><a name="[1b8]"></a>wait_ms</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, mbed_wait_api_no_rtos.o(i.wait_ms))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = wait_ms &rArr; us_ticker_read &rArr; HAL_InitTick &rArr; NVIC_SetVector &rArr; __aeabi_memcpy4
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;us_ticker_read
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_die
-<LI><a href="#[1b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sht31::Sht31(PinName, PinName)
+<BR>[Called By]<UL><LI><a href="#[1cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_die
+<LI><a href="#[1b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sht31::Sht31(PinName, PinName)
 </UL>
 
 <P><STRONG><a name="[f3]"></a>_get_lc_numeric</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, lc_numeric_c.o(locale$$code))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = _get_lc_numeric
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
+<BR>[Calls]<UL><LI><a href="#[1bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init_lc_numeric_2
 </UL>
@@ -3140,21 +3178,21 @@ Global Symbols
 <P><STRONG><a name="[8f]"></a>_get_lc_ctype</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, lc_ctype_c.o(locale$$code))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = _get_lc_ctype
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
+<BR>[Calls]<UL><LI><a href="#[1bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init_lc_ctype_2
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> rt_ctype_table.o(.text)
 </UL>
-<P><STRONG><a name="[1ac]"></a>SingletonPtr&lang;PlatformMutex&rang;::operator -&rang;()</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, FileBase.o(t._ZN12SingletonPtrI13PlatformMutexEptEv))
+<P><STRONG><a name="[1ae]"></a>SingletonPtr&lang;PlatformMutex&rang;::operator -&rang;()</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, FileBase.o(t._ZN12SingletonPtrI13PlatformMutexEptEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 568 + Unknown Stack Size
 <LI>Call Chain = SingletonPtr&lang;PlatformMutex&rang;::operator -&rang;() &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
+<BR>[Calls]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
 </UL>
 <BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileBase::~FileBase()
-<LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileBase::FileBase(const char*, mbed::PathType)
-<LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileBase::lookup(const char*, unsigned)
+<LI><a href="#[1b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileBase::FileBase(const char*, mbed::PathType)
+<LI><a href="#[1ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::FileBase::lookup(const char*, unsigned)
 </UL>
 
 <P><STRONG><a name="[bf]"></a>void mbed::Callback&lang;void()&rang;::function_call&lang;void(*)()&rang;(const void*)</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, SerialBase.o(t._ZN4mbed8CallbackIFvvEE13function_callIPS1_EEvPKv))
@@ -3171,7 +3209,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(i._ZN4mbed6SerialD1Ev)
 </UL>
-<P><STRONG><a name="[215]"></a>mbed::Callback&lang;void()&rang;::~Callback__sub_object()</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, main.o(t._ZN4mbed8CallbackIFvvEED1Ev), UNUSED)
+<P><STRONG><a name="[217]"></a>mbed::Callback&lang;void()&rang;::~Callback__sub_object()</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, main.o(t._ZN4mbed8CallbackIFvvEED1Ev), UNUSED)
 
 <P><STRONG><a name="[9b]"></a>CThunk&lang;mbed::SerialBase&rang;::trampoline(mbed::SerialBase*, void*, void(mbed::SerialBase::**)(void*))</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, SerialBase.o(t._ZN6CThunkIN4mbed10SerialBaseEE10trampolineEPS1_PvPMS1_FvS4_E))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = CThunk&lang;mbed::SerialBase&rang;::trampoline(mbed::SerialBase*, void*, void(mbed::SerialBase::**)(void*))
@@ -3187,9 +3225,9 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init_fp_1
 </UL>
 
-<P><STRONG><a name="[216]"></a>__fplib_config_fpu_vfp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fpinit.o(x$fpl$fpinit), UNUSED)
+<P><STRONG><a name="[218]"></a>__fplib_config_fpu_vfp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fpinit.o(x$fpl$fpinit), UNUSED)
 
-<P><STRONG><a name="[217]"></a>__fplib_config_pureend_doubles</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fpinit.o(x$fpl$fpinit), UNUSED)
+<P><STRONG><a name="[219]"></a>__fplib_config_pureend_doubles</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fpinit.o(x$fpl$fpinit), UNUSED)
 
 <P><STRONG><a name="[ce]"></a>_printf_fp_dec</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, printf1.o(x$fpl$printf1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 320<LI>Call Chain = _printf_fp_dec &rArr; _printf_fp_dec_real &rArr; _fp_digits &rArr; _btod_etento &rArr; _btod_emul &rArr; _e2e
@@ -3212,31 +3250,31 @@ Global Symbols
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[c2]"></a>__sti___8_main_cpp_1d334e7b</STRONG> (Thumb, 262 bytes, Stack size 24 bytes, main.o(i.__sti___8_main_cpp_1d334e7b))
+<P><STRONG><a name="[c2]"></a>__sti___8_main_cpp_1d334e7b</STRONG> (Thumb, 244 bytes, Stack size 24 bytes, main.o(i.__sti___8_main_cpp_1d334e7b))
 <BR><BR>[Stack]<UL><LI>Max Depth = 736 + Unknown Stack Size
 <LI>Call Chain = __sti___8_main_cpp_1d334e7b &rArr; mbed::Serial::Serial(PinName, PinName, const char*, int) &rArr; mbed::Stream::Stream__sub_object(const char*) &rArr; fopen &rArr; freopen &rArr; _sys_open &rArr; mbed::FilePath::FilePath(const char*) &rArr; mbed::FileBase::lookup(const char*, unsigned) &rArr; SingletonPtr&lang;PlatformMutex&rang;::operator -&rang;() &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
-<LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init_out
-<LI><a href="#[1b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;analogin_init
-<LI><a href="#[1b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
-<LI><a href="#[1b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sht31::Sht31(PinName, PinName)
-<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::Serial::Serial(PinName, PinName, const char*, int)
+<BR>[Calls]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed_assert_internal
+<LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init_out
+<LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;analogin_init
+<LI><a href="#[1ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
+<LI><a href="#[1b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sht31::Sht31(PinName, PinName)
+<LI><a href="#[1a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbed::Serial::Serial(PinName, PinName, const char*, int)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.init_array)
 </UL>
-<P><STRONG><a name="[1be]"></a>adc_read</STRONG> (Thumb, 202 bytes, Stack size 24 bytes, analogin_api.o(i.adc_read))
+<P><STRONG><a name="[1c0]"></a>adc_read</STRONG> (Thumb, 202 bytes, Stack size 24 bytes, analogin_api.o(i.adc_read))
 <BR><BR>[Stack]<UL><LI>Max Depth = 312 + Unknown Stack Size
 <LI>Call Chain = adc_read &rArr; error &rArr; mbed_error_vfprintf &rArr;  serial_init (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;error
-<LI><a href="#[1c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Start
+<LI><a href="#[1c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Start
 <LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_PollForConversion
-<LI><a href="#[1c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_GetValue
-<LI><a href="#[1c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_GetState
-<LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConfigChannel
+<LI><a href="#[1c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_GetValue
+<LI><a href="#[1c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_GetState
+<LI><a href="#[1c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConfigChannel
 </UL>
-<BR>[Called By]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;analogin_read
+<BR>[Called By]<UL><LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;analogin_read
 </UL>
 
 <P><STRONG><a name="[152]"></a>can_irq</STRONG> (Thumb, 232 bytes, Stack size 32 bytes, can_api.o(i.can_irq))
@@ -3254,7 +3292,7 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 688 + Unknown Stack Size
 <LI>Call Chain = i2c1_irq &rArr; HAL_I2C_ER_IRQHandler &rArr; I2C_ITError &rArr; HAL_I2C_ErrorCallback &rArr; i2c_init &rArr; i2c_frequency &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_EV_IRQHandler
+<BR>[Calls]<UL><LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_EV_IRQHandler
 <LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_ER_IRQHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> i2c_api.o(i.HAL_I2C_ErrorCallback)
@@ -3263,7 +3301,7 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 688 + Unknown Stack Size
 <LI>Call Chain = i2c2_irq &rArr; HAL_I2C_ER_IRQHandler &rArr; I2C_ITError &rArr; HAL_I2C_ErrorCallback &rArr; i2c_init &rArr; i2c_frequency &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_EV_IRQHandler
+<BR>[Calls]<UL><LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_EV_IRQHandler
 <LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_ER_IRQHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> i2c_api.o(i.HAL_I2C_ErrorCallback)
@@ -3272,7 +3310,7 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 688 + Unknown Stack Size
 <LI>Call Chain = i2c3_irq &rArr; HAL_I2C_ER_IRQHandler &rArr; I2C_ITError &rArr; HAL_I2C_ErrorCallback &rArr; i2c_init &rArr; i2c_frequency &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_EV_IRQHandler
+<BR>[Calls]<UL><LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_EV_IRQHandler
 <LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_ER_IRQHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> i2c_api.o(i.HAL_I2C_ErrorCallback)
@@ -3281,20 +3319,20 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 688 + Unknown Stack Size
 <LI>Call Chain = i2c4_irq &rArr; HAL_I2C_ER_IRQHandler &rArr; I2C_ITError &rArr; HAL_I2C_ErrorCallback &rArr; i2c_init &rArr; i2c_frequency &rArr; mbed_assert_internal &rArr; mbed_error_printf &rArr; serial_init &rArr;  mbed_assert_internal (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_EV_IRQHandler
+<BR>[Calls]<UL><LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_EV_IRQHandler
 <LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_ER_IRQHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> i2c_api.o(i.HAL_I2C_ErrorCallback)
 </UL>
-<P><STRONG><a name="[1d3]"></a>init_uart</STRONG> (Thumb, 112 bytes, Stack size 8 bytes, serial_api.o(i.init_uart))
+<P><STRONG><a name="[1d5]"></a>init_uart</STRONG> (Thumb, 112 bytes, Stack size 8 bytes, serial_api.o(i.init_uart))
 <BR><BR>[Stack]<UL><LI>Max Depth = 296 + Unknown Stack Size
 <LI>Call Chain = init_uart &rArr; error &rArr; mbed_error_vfprintf &rArr;  serial_init (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
 <LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;error
 </UL>
-<BR>[Called By]<UL><LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_baud
-<LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_init
+<BR>[Called By]<UL><LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_baud
+<LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;serial_init
 </UL>
 
 <P><STRONG><a name="[9a]"></a>I2C_DMAAbort</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, stm32f7xx_hal_i2c.o(i.I2C_DMAAbort))
