@@ -15,7 +15,7 @@ Date: 2018.06.22
 [Experimental Report](ExperimentalReport.pdf)
 
 ## System Design
-![Smart Clock Design](https://i.imgur.com/9HbH92A.png)
+![Smart Clock Design](https://i.imgur.com/JJuVw5N.png)
 
 ## Demo
 [![Smart Clock](https://i.imgur.com/EEqV5JO.png)](https://youtu.be/XV4XlSmcJhs)
