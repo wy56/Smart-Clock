@@ -2,7 +2,6 @@ Smart Clock
 ===
 Author:<br>
 陳韋佑 <zxc41329 [at] gmail.com> <br>
-
 林後昇 <106522054 [at] cc.ncu.edu.tw>
 
 Date: 2018.06.22
