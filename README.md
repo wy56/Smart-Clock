@@ -12,10 +12,10 @@ Date: 2018.06.22
 - IDE: [Keil uVision5](http://www2.keil.com/mdk5/uvision/)、[Arduino IDE](https://www.arduino.cc/en/main/software)
 
 ## Report
-[Experimental Report](ExperimentalReport.pdf)
+[Smart Clock Report](Report.pdf)
 
 ## System Design
-![Smart Clock Design](https://i.imgur.com/JJuVw5N.png)
+![Smart Clock Design]((https://i.imgur.com/dkQW04E.png)
 
 ## Demo
 [![Smart Clock](https://i.imgur.com/EEqV5JO.png)](https://youtu.be/XV4XlSmcJhs)
